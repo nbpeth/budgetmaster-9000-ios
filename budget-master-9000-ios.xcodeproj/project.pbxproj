@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		2C645B901F0978990011E925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C645B8F1F0978990011E925 /* AppDelegate.swift */; };
-		2C645B921F0978990011E925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C645B911F0978990011E925 /* ViewController.swift */; };
 		2C645B951F0978990011E925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B931F0978990011E925 /* Main.storyboard */; };
 		2C645B971F0978990011E925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B961F0978990011E925 /* Assets.xcassets */; };
 		2C645B9A1F0978990011E925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B981F0978990011E925 /* LaunchScreen.storyboard */; };
+		2CB7F2411F0ADF5600C62B19 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7F2401F0ADF5600C62B19 /* Expense.swift */; };
+		2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */; };
+		2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */; };
+		2CE865921F0AF24500DF8E64 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */; };
+		2CF433691F09791100ECEBC8 /* BudgetMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433681F09791100ECEBC8 /* BudgetMasterService.swift */; };
+		2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336A1F097A3B00ECEBC8 /* User.swift */; };
+		2CF433701F0982D900ECEBC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336F1F0982D900ECEBC8 /* LoginViewController.swift */; };
+		2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433721F098AF900ECEBC8 /* AppState.swift */; };
+		778464A1EB92FEB2257FD372 /* Pods_budget_master_9000_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.release.xcconfig"; sourceTree = "<group>"; };
 		2C645B8C1F0978990011E925 /* budget-master-9000-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "budget-master-9000-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C645B8F1F0978990011E925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C645B911F0978990011E925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C645B941F0978990011E925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C645B961F0978990011E925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C645B991F0978990011E925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C645B9B1F0978990011E925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB7F2401F0ADF5600C62B19 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		2CF433681F09791100ECEBC8 /* BudgetMasterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetMasterService.swift; sourceTree = "<group>"; };
+		2CF4336A1F097A3B00ECEBC8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CF4336F1F0982D900ECEBC8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2CF433721F098AF900ECEBC8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_budget_master_9000_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778464A1EB92FEB2257FD372 /* Pods_budget_master_9000_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				2C645B8E1F0978990011E925 /* budget-master-9000-ios */,
 				2C645B8D1F0978990011E925 /* Products */,
+				906191F90DF1602663D48554 /* Pods */,
+				7C4B7B9713891CDD3C665DEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,78 @@
 		2C645B8E1F0978990011E925 /* budget-master-9000-ios */ = {
 			isa = PBXGroup;
 			children = (
-				2C645B8F1F0978990011E925 /* AppDelegate.swift */,
-				2C645B911F0978990011E925 /* ViewController.swift */,
-				2C645B931F0978990011E925 /* Main.storyboard */,
+				2CE865901F0AF21700DF8E64 /* expense */,
+				2CF433711F098AD600ECEBC8 /* user */,
+				2CF4336E1F09823400ECEBC8 /* authentication */,
+				2CF433671F0978FB00ECEBC8 /* network */,
+				2CF433661F0978F500ECEBC8 /* ui */,
 				2C645B961F0978990011E925 /* Assets.xcassets */,
 				2C645B981F0978990011E925 /* LaunchScreen.storyboard */,
 				2C645B9B1F0978990011E925 /* Info.plist */,
+				2C645B8F1F0978990011E925 /* AppDelegate.swift */,
+				2CF433721F098AF900ECEBC8 /* AppState.swift */,
+				2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */,
 			);
 			path = "budget-master-9000-ios";
+			sourceTree = "<group>";
+		};
+		2CE865901F0AF21700DF8E64 /* expense */ = {
+			isa = PBXGroup;
+			children = (
+				2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */,
+				2CB7F2401F0ADF5600C62B19 /* Expense.swift */,
+				2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */,
+			);
+			name = expense;
+			sourceTree = "<group>";
+		};
+		2CF433661F0978F500ECEBC8 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				2C645B931F0978990011E925 /* Main.storyboard */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		2CF433671F0978FB00ECEBC8 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				2CF433681F09791100ECEBC8 /* BudgetMasterService.swift */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		2CF4336E1F09823400ECEBC8 /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2CF4336F1F0982D900ECEBC8 /* LoginViewController.swift */,
+			);
+			name = authentication;
+			sourceTree = "<group>";
+		};
+		2CF433711F098AD600ECEBC8 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				2CF4336A1F097A3B00ECEBC8 /* User.swift */,
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		7C4B7B9713891CDD3C665DEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		906191F90DF1602663D48554 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */,
+				1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C645B9E1F0978990011E925 /* Build configuration list for PBXNativeTarget "budget-master-9000-ios" */;
 			buildPhases = (
+				1CD170DCD56B0021D7C30022 /* [CP] Check Pods Manifest.lock */,
 				2C645B881F0978990011E925 /* Sources */,
 				2C645B891F0978990011E925 /* Frameworks */,
 				2C645B8A1F0978990011E925 /* Resources */,
+				F7038A0892E307903040ACDA /* [CP] Embed Pods Frameworks */,
+				B67D9D542B5CF0F1C4C72A1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +220,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CD170DCD56B0021D7C30022 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-budget-master-9000-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B67D9D542B5CF0F1C4C72A1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7038A0892E307903040ACDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C645B881F0978990011E925 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C645B921F0978990011E925 /* ViewController.swift in Sources */,
+				2CF433701F0982D900ECEBC8 /* LoginViewController.swift in Sources */,
+				2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */,
+				2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */,
+				2CE865921F0AF24500DF8E64 /* ExpenseTableViewCell.swift in Sources */,
+				2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */,
+				2CB7F2411F0ADF5600C62B19 /* Expense.swift in Sources */,
 				2C645B901F0978990011E925 /* AppDelegate.swift in Sources */,
+				2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */,
+				2CF433691F09791100ECEBC8 /* BudgetMasterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +412,7 @@
 		};
 		2C645B9F1F0978990011E925 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CAFRP4KNJ;
@@ -272,6 +426,7 @@
 		};
 		2C645BA01F0978990011E925 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CAFRP4KNJ;
@@ -302,6 +457,7 @@
 				2C645BA01F0978990011E925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

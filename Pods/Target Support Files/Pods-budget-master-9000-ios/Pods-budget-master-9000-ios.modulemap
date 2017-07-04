@@ -1,0 +1,6 @@
+framework module Pods_budget_master_9000_ios {
+  umbrella header "Pods-budget-master-9000-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
