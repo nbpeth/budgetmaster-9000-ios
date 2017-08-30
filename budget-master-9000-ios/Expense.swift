@@ -1,20 +1,21 @@
 
 import Foundation
+import RealmSwift
+import GoogleSignIn
 
-class Expense: NSObject {
+class Expense: Object {
     
     var id:Int?
     var cost:Double?
-    var location:String?
-    var expenseType:String?
-    var expenseDescription:String?
-    var expenseDate:String?
+    dynamic var location:String?
+    dynamic var expenseType:String?
+    dynamic var expenseDescription:String?
+    dynamic var expenseDate:String?
+    dynamic var userId:String?
+    dynamic var username:String?
+
     
-    override init(){
-        super.init()
-    }
-    
-    convenience init(_ id:Int, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String){
+    convenience init(_ id:Int, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String, _ username:String){
         self.init()
         self.id = id
         self.location = location
@@ -22,6 +23,9 @@ class Expense: NSObject {
         self.expenseType = expenseType
         self.expenseDescription = expenseDescription
         self.expenseDate = expenseDate
+        self.userId = userId
+        self.username = username
+
     }
 
     
@@ -36,15 +40,42 @@ class Expense: NSObject {
             let expenseType = expense["expenseType"] as? String ?? ""
             let expenseDescription = expense["description"] as? String ?? ""
             let expenseDate = expense["expenseDate"] as? String ?? ""
-            
-            return Expense(id, location, cost, expenseType, expenseDescription, expenseDate)
+            let userId = expense["userId"] as? String ?? ""
+            //get username
+            return Expense(id, location, cost, expenseType, expenseDescription, expenseDate, userId, "")
 
         }
         
         return expenses
     }
     
-//    override var description: String {
-//        return self.id + " " + self.location + " " + self.cost + " " + self.expenseType + " " + self.expenseDate
-//    }
+    func toDictionary() -> [String:AnyObject] {
+        return [
+            "location":self.location as AnyObject,
+            "cost":self.cost as AnyObject,
+            "expenseType":self.expenseType as AnyObject,
+            "expenseDate":self.expenseDate as AnyObject
+//            "userId":self.userId as AnyObject
+        ]
+    }
+
+    static func loadExpenses() -> [Expense]{
+        let realm = try! Realm()
+        let username = AppState.shared.user.name
+        return realm.objects(Expense.self).filter{$0.username == username}.map{$0}
+    }
+    
+    static func save(_ expense: Expense) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(Expense.self, value: expense, update: false)
+        }
+    }
+    
+    static func delete(_ expense: Expense){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(expense)
+        }
+    }
 }

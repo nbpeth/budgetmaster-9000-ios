@@ -1,25 +1,15 @@
 import RealmSwift
 import Foundation
+import GoogleSignIn
 
 final class AppState {
     
     private init() { }
     
-    // MARK: Shared Instance
     static let shared = AppState()
     
     var user:User = User()
     var authToken:String = ""
-    
-    func setInitialAppState(token:String){
-        self.authToken = token
-        let user = User()
-        user.authToken = token
-        user.name = "nmpeth"
-        
-        saveUser(user)
-        
-    }
     
     func saveUser(_ user:User){
         let realm = try! Realm()
@@ -28,12 +18,19 @@ final class AppState {
         }
     }
     
-//    func decode(_ token:String) -> [String:AnyObject]{
-//        guard let payload = token.components(separatedBy: ".")[1] as? String,
-//            let decodedData = NSData(base64Encoded: payload, options: NSData.Base64DecodingOptions(rawValue: 0)),
-//            let decodedString = NSString(data: decodedData as Data, encoding: String.Encoding.utf8.rawValue) as String?,
-//            let dictionary = decodedString as? [String:AnyObject]
-//            else { return [:] }
-//        return dictionary
-//    }
+    func updateUser(_ user: User){
+        self.user = user
+    }
+    
+
+    func getUser() -> User {
+        let realm = try! Realm()
+        
+        guard let username = GIDSignIn.sharedInstance().currentUser.profile.email,
+            let user = realm.objects(User.self).filter({ $0.name == username }).first else { return User() }
+        
+        
+        return user
+    }
+    
 }

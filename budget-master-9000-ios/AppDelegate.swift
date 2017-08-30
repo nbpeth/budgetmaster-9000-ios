@@ -1,46 +1,93 @@
-//
-//  AppDelegate.swift
-//  budget-master-9000-ios
-//
-//  Created by Bud Manstrong on 7/2/17.
-//  Copyright © 2017 Bud Manstrong. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return GIDSignIn.sharedInstance().handle(url,
+                    sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                    annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+
+        if (error == nil) {
+
+            signIn.shouldFetchBasicProfile = true
+            
+            let userId = user.profile.email
+
+            Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+
+            let realm = try! Realm()
+            let savedUser = realm.objects(User.self).filter{$0.name == userId}
+            
+            if(savedUser.count > 0){
+                let currentUser = savedUser.first
+                AppState.shared.user = currentUser ?? User()
+                AppState.shared.authToken = user.authentication.idToken
+
+            }
+            else{
+                let newUser = User()
+                newUser.name = userId
+                newUser.spendingThreshold.value = 300
+                newUser.authToken = user.authentication.idToken
+                
+                AppState.shared.user = newUser
+                AppState.shared.authToken = user.authentication.idToken
+                
+                try! realm.write {
+                    realm.create(User.self, value: newUser, update: true)
+                }
+            }
+            
+            
+            //auto sign in is causing navigation bar to appear, fix me
+            
+            let rootViewController = self.window!.rootViewController as! UINavigationController
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+            rootViewController.pushViewController(mainViewController, animated: false)
+
+
+            
+        } else {
+            print("\(error.localizedDescription)")
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //having issues getting clientId from API, fix me
+        GIDSignIn.sharedInstance().clientID = "559785174037-t1mifh0tkkebo55e4v26fhiqtb70a84k.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self as GIDSignInDelegate
+
+        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+       
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
         print("Realm File: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
 
