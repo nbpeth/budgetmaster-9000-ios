@@ -11,7 +11,7 @@ class SummaryViewController: BaseViewController, UITableViewDelegate, UITableVie
         statsTableView.delegate = self
         statsTableView.dataSource = self
         
-        BudgetMasterService(delegate: self).fetchStatistics()
+//        BudgetMasterService(delegate: self).fetchStatistics()
 
 
     }

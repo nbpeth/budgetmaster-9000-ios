@@ -19,8 +19,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     var selectedExpenseType:String?
     var hideTypePicker = true
     var hideDatePicker = true
-    
-    let types = ["Clothing","Household Supplies","Groceries","Entertainment","Health and Fitness","Medical","Miscellaneous","Restaurant"]
+    var expenseService: ExpenseService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,13 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         self.expenseTypePicker.delegate = self
         self.locationTextField.delegate = self
         self.costTextField.delegate = self
+        expenseService = ExpenseService(delegate: self)
         
         self.view.backgroundColor = Colors.background
         
-        self.selectedExpenseType = types[0]
+        self.selectedExpenseType = ExpenseTypes.types[0]
         
-        expenseTypeDetailLabel.text = types[0]
+        expenseTypeDetailLabel.text = ExpenseTypes.types[0]
         expenseDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
 
         setExpenseDateLabel()
@@ -53,7 +53,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         
         let expense = Expense(location, cost, expenseType, "", formatDate(expenseDatePicker.date), email)
         
-        Expense.save(expense)
+        expenseService?.save(expense)
         
         resetFormFields()        
     }
@@ -88,18 +88,18 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return types.count
+        return ExpenseTypes.types.count
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = types[row]
+        let titleData = ExpenseTypes.types[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
         return myTitle
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        expenseTypeDetailLabel.text = types[row]
-        selectedExpenseType = types[row]
+        expenseTypeDetailLabel.text = ExpenseTypes.types[row]
+        selectedExpenseType = ExpenseTypes.types[row]
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -149,8 +149,8 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         costTextField.text = ""
         hideTypePicker = true
         hideDatePicker = true
-        selectedExpenseType = types[0]
-        expenseTypeDetailLabel.text = types[0]
+        selectedExpenseType = ExpenseTypes.types[0]
+        expenseTypeDetailLabel.text = ExpenseTypes.types[0]
         self.tableView.reloadData()
     }
 }

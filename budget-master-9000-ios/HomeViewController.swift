@@ -17,6 +17,10 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureWelcomeLabel()
+        expenseService = ExpenseService(delegate: self)
+        
+        sync()
+
 
     }
     
@@ -38,18 +42,27 @@ class HomeViewController: BaseViewController {
         pageBack()
     }
     
+    override func fail(_ message: String){
+        activityIndicator.stopAnimating()
+        setRemainingMoneyLabelText(remainder: 0)
+        self.dateRangeLabel.text = message
+    }
+    
     override func success(response: [String : AnyObject]?) {
         if response != nil {
             activityIndicator.stopAnimating()
             configureRemainingMoneyLabel(response!)
         }
         else{
-            fail("bad")
+            fail("Unable to Connect To Server at this Time")
         }
         
         activityIndicator.stopAnimating()
         
-        
+    }
+    
+    fileprivate func sync(){
+        expenseService?.syncWithServer()
     }
     
     fileprivate func pageForward(){
@@ -65,11 +78,8 @@ class HomeViewController: BaseViewController {
     }
     
     fileprivate func loadStatsData(){
-        
+        BudgetMasterService(delegate: self).fetchWeekData(weekOffSet: page)
     }
-//    fileprivate func loadStatsData(){
-//        BudgetMasterService(delegate: self).fetchWeekData(weekOffSet: page)
-//    }
     
     fileprivate func configureRemainingMoneyLabel(_ stats: [String:AnyObject]){
         guard let sum = stats["sum"] as? Double,
@@ -77,8 +87,7 @@ class HomeViewController: BaseViewController {
             let endDate = stats["weekEnd"] as? String,
             let threshold = spendingThreshold() else { return }
         let remainder = (threshold-sum)
-        self.remainingMoneyLabel.text = "\(String(format: "$%.02f", locale: Locale.current, arguments: [remainder]))"
-        self.remainingMoneyLabel.textColor = remainder >= 0 ? Colors.success : Colors.warn
+        setRemainingMoneyLabelText(remainder: remainder)
         
         let dateText = page == 0 ? "This Week" : "\(startDate) - \(endDate)"
         
@@ -86,6 +95,11 @@ class HomeViewController: BaseViewController {
     
         loadProgressBar(sum:sum, threshold: threshold)
 
+    }
+    
+    fileprivate func setRemainingMoneyLabelText(remainder: Double){
+        self.remainingMoneyLabel.text = "\(String(format: "$%.02f", locale: Locale.current, arguments: [remainder]))"
+        self.remainingMoneyLabel.textColor = remainder >= 0 ? Colors.success : Colors.warn
     }
     
     fileprivate func configureWelcomeLabel(){

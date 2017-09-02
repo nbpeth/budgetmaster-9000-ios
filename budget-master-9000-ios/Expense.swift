@@ -70,7 +70,6 @@ class Expense: Object {
         ]
     }
 
-    //sort by id
     static func loadExpenses() -> [Expense]{
         let realm = try! Realm()
         return realm.objects(Expense.self).filter{$0.userId == AppState.shared.user.name}.map{$0}

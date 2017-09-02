@@ -90,20 +90,20 @@ class BudgetMasterService {
         }
     }
     
-    func fetchStatistics() {
-        guard let delegate = self.delegate else { return }
-        let url = "\(uri)/expenses/\(currentUser?.email ?? "")/stats"
-        
-        Alamofire.request(url, method: HTTPMethod.get, headers: headers).responseJSON { response in
-            if response.result.error != nil {
-                delegate.fail(self.serverDownError)
-            }
-            else {
-                guard let dictionary = response.result.value as? [String:AnyObject] else { return }
-                delegate.success(response: dictionary)
-            }
-        }
-    }
+//    func fetchStatistics() {
+//        guard let delegate = self.delegate else { return }
+//        let url = "\(uri)/expenses/\(currentUser?.email ?? "")/stats"
+//        
+//        Alamofire.request(url, method: HTTPMethod.get, headers: headers).responseJSON { response in
+//            if response.result.error != nil {
+//                delegate.fail(self.serverDownError)
+//            }
+//            else {
+//                guard let dictionary = response.result.value as? [String:AnyObject] else { return }
+//                delegate.success(response: dictionary)
+//            }
+//        }
+//    }
     
     func fetchWeekData(weekOffSet: Int) {
         guard let delegate = self.delegate else { return }

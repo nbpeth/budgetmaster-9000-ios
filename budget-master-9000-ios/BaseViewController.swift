@@ -3,7 +3,7 @@ import UIKit
 
 
 class BaseViewController: UIViewController, ServiceDelgateable {
-
+    var expenseService: ExpenseService?
     
     override func viewDidLoad() {
         super.viewDidLoad()

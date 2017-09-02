@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/ExpenseService.swift"
-            timestampString = "525829829.609315"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
-            landmarkName = "getExpensesFromServer()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "budget-master-9000-ios/BudgetMasterService.swift"
             timestampString = "526061072.521122"
             startingColumnNumber = "9223372036854775807"
@@ -54,26 +38,26 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.fetchExpenses (page : Swift.Int) -&gt; ()"
+                  symbolName = "budget_master_9000_ios.BudgetMasterService.fetchExpenses (page : Swift.Int, limit : Swift.Int) -&gt; ()"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "526061073.990026"
+                  timestampString = "526064956.191007"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "1462">
+                  offsetFromSymbolStart = "1591">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.(fetchExpenses (page : Swift.Int) -&gt; ()).(closure #1)"
+                  symbolName = "budget_master_9000_ios.BudgetMasterService.(fetchExpenses (page : Swift.Int, limit : Swift.Int) -&gt; ()).(closure #1)"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "526061073.996797"
+                  timestampString = "526064956.194056"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"

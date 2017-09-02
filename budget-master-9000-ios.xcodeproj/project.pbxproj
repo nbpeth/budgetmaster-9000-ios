@@ -19,6 +19,7 @@
 		2C77D9C81F0D6EBD00CF4F1A /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9C71F0D6EBD00CF4F1A /* SummaryViewController.swift */; };
 		2C77D9CA1F0D708500CF4F1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C77D9C91F0D708500CF4F1A /* GoogleService-Info.plist */; };
 		2C77D9CE1F0DB85400CF4F1A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */; };
+		2CA430E41F5B176500307EF7 /* ExpenseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA430E31F5B176500307EF7 /* ExpenseTypes.swift */; };
 		2CADFACC1F0BFC2A009081B9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADFACB1F0BFC2A009081B9 /* Colors.swift */; };
 		2CADFAD01F0C073F009081B9 /* CreateExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADFACF1F0C073F009081B9 /* CreateExpenseTableViewController.swift */; };
 		2CB7F2411F0ADF5600C62B19 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7F2401F0ADF5600C62B19 /* Expense.swift */; };
@@ -49,6 +50,7 @@
 		2C77D9C71F0D6EBD00CF4F1A /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		2C77D9C91F0D708500CF4F1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		2CA430E31F5B176500307EF7 /* ExpenseTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTypes.swift; sourceTree = "<group>"; };
 		2CADFACB1F0BFC2A009081B9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2CADFACF1F0C073F009081B9 /* CreateExpenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateExpenseTableViewController.swift; sourceTree = "<group>"; };
 		2CB7F2401F0ADF5600C62B19 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		2C645B8E1F0978990011E925 /* budget-master-9000-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2CA430E21F5B175700307EF7 /* New Group */,
 				2C03ED421F11652400FBABD4 /* preferences */,
 				2CE865901F0AF21700DF8E64 /* expense */,
 				2C03ED411F11650700FBABD4 /* summary */,
@@ -132,6 +135,14 @@
 				2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */,
 			);
 			path = "budget-master-9000-ios";
+			sourceTree = "<group>";
+		};
+		2CA430E21F5B175700307EF7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				2CA430E31F5B176500307EF7 /* ExpenseTypes.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		2CADFAD31F0C106E009081B9 /* component */ = {
@@ -356,6 +367,7 @@
 				2C03ED401F11608400FBABD4 /* MoreTableViewController.swift in Sources */,
 				2CADFACC1F0BFC2A009081B9 /* Colors.swift in Sources */,
 				2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */,
+				2CA430E41F5B176500307EF7 /* ExpenseTypes.swift in Sources */,
 				2C50D4351F12970300761A10 /* BaseViewController.swift in Sources */,
 				2C50D4371F12A4F300761A10 /* TabCarController.swift in Sources */,
 				2CADFAD01F0C073F009081B9 /* CreateExpenseTableViewController.swift in Sources */,

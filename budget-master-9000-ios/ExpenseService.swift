@@ -1,23 +1,28 @@
 
 import Foundation
 
-class ExpenseService: ServiceDelgateable {
+class ExpenseService {
+    var delegate:ServiceDelgateable? = nil
     
-    func getExpensesFromServer() -> [Expense] {
-        var page = 0
-        var expenses = [Expense]()
-        
-        BudgetMasterService(delegate: self).fetchExpenses(page: page)
-        
-        return expenses
+    init(delegate: ServiceDelgateable){
+        self.delegate = delegate
     }
     
-    func success(response: [String : AnyObject]?) {
-        
+    func save(_ expense: Expense){
+        Expense.save(expense)
     }
     
-    func fail(_ message: String) {
-        
+    func delete(_ expense: Expense){
+        Expense.delete(expense)
     }
+    
+    func load() -> [Expense] {
+        return [Expense]()
+    }
+    
+    func syncWithServer() {
+        //todo
+    }
+    
     
 }
