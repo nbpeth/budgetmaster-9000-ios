@@ -9,6 +9,8 @@ protocol ServiceDelgateable{
 }
 
 class BudgetMasterService {
+    //extract contants to promotion levels
+    
     let uri = "http://34.233.161.220:8080"
     let serverDownError = "Unable to retrieve data from server. Please try again later"
 

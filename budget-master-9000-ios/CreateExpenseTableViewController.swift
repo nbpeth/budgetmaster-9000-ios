@@ -19,6 +19,9 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     var hideTypePicker = true
     var hideDatePicker = true
     
+    //extract
+    let types = ["Clothing","Household Supplies","Groceries","Entertainment","Health and Fitness","Medical","Miscellaneous","Restaurant"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.expenseTypePicker.dataSource = self
@@ -82,8 +85,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    let types = ["Clothing","Household Supplies","Groceries","Entertainment","Health and Fitness","Medical","Miscellaneous","Restaurant"]
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

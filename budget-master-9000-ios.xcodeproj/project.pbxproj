@@ -21,7 +21,6 @@
 		2C77D9CE1F0DB85400CF4F1A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */; };
 		2CADFACC1F0BFC2A009081B9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADFACB1F0BFC2A009081B9 /* Colors.swift */; };
 		2CADFAD01F0C073F009081B9 /* CreateExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADFACF1F0C073F009081B9 /* CreateExpenseTableViewController.swift */; };
-		2CADFAD21F0C1067009081B9 /* ExpenseTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADFAD11F0C1067009081B9 /* ExpenseTypePicker.swift */; };
 		2CB7F2411F0ADF5600C62B19 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7F2401F0ADF5600C62B19 /* Expense.swift */; };
 		2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */; };
 		2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */; };
@@ -51,7 +50,6 @@
 		2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		2CADFACB1F0BFC2A009081B9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2CADFACF1F0C073F009081B9 /* CreateExpenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateExpenseTableViewController.swift; sourceTree = "<group>"; };
-		2CADFAD11F0C1067009081B9 /* ExpenseTypePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTypePicker.swift; sourceTree = "<group>"; };
 		2CB7F2401F0ADF5600C62B19 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		2CADFAD31F0C106E009081B9 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				2CADFAD11F0C1067009081B9 /* ExpenseTypePicker.swift */,
 				2C50D43A1F130F1200761A10 /* CircleProgressView.swift */,
 			);
 			name = component;
@@ -367,7 +364,6 @@
 				2C645B901F0978990011E925 /* AppDelegate.swift in Sources */,
 				2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */,
 				2C50D43B1F130F1200761A10 /* CircleProgressView.swift in Sources */,
-				2CADFAD21F0C1067009081B9 /* ExpenseTypePicker.swift in Sources */,
 				2CF433691F09791100ECEBC8 /* BudgetMasterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

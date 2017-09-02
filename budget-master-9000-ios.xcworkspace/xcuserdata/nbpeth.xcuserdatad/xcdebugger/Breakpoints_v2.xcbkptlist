@@ -9,334 +9,78 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/BudgetMasterService.swift"
-            timestampString = "525745120.161517"
+            filePath = "budget-master-9000-ios/CreateExpenseTableViewController.swift"
+            timestampString = "526061072.521122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "fetchWeekData(weekOffSet:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "submitButtonWasPressed(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.fetchWeekData (weekOffSet : Swift.Int) -&gt; ()"
-                  moduleName = "budget-master-9000-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "522436461.523079"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "133">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.(fetchWeekData (weekOffSet : Swift.Int) -&gt; ()).(implicit closure #1)"
-                  moduleName = "budget-master-9000-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "522436461.525701"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "budget-master-9000-ios/ExpenseService.swift"
+            timestampString = "525829829.609315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "getExpensesFromServer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "budget-master-9000-ios/BudgetMasterService.swift"
-            timestampString = "525745120.161517"
+            timestampString = "526061072.521122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "fetchWeekData(weekOffSet:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchExpenses(page:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.fetchWeekData (weekOffSet : Swift.Int) -&gt; ()"
+                  symbolName = "budget_master_9000_ios.BudgetMasterService.fetchExpenses (page : Swift.Int) -&gt; ()"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "522436461.532867"
+                  timestampString = "526061073.990026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "1424">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1462">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.BudgetMasterService.(fetchWeekData (weekOffSet : Swift.Int) -&gt; ()).(closure #1)"
+                  symbolName = "budget_master_9000_ios.BudgetMasterService.(fetchExpenses (page : Swift.Int) -&gt; ()).(closure #1)"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/BudgetMasterService.swift"
-                  timestampString = "522436461.535888"
+                  timestampString = "526061073.996797"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
                   offsetFromSymbolStart = "15">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/BudgetMasterService.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "fetchWeekData(weekOffSet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/BudgetMasterService.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "fetchWeekData(weekOffSet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/BudgetMasterService.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "fetchWeekData(weekOffSet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/HomeViewController.swift"
-            timestampString = "522456697.947699"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "configureRemainingMoneyLabel(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.HomeViewController.(configureRemainingMoneyLabel in _BA33446C37D25B3F44B581052353CC65) (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()"
-                  moduleName = "budget-master-9000-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/HomeViewController.swift"
-                  timestampString = "525745121.805233"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "415">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.HomeViewController.(configureRemainingMoneyLabel in _BA33446C37D25B3F44B581052353CC65) (Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()"
-                  moduleName = "budget-master-9000-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/HomeViewController.swift"
-                  timestampString = "525745121.80845"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "859">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724883.652994"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724799.478829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/ExpensesViewController.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "fail(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/ExpensesViewController.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "success(response:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724909.175423"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724918.219708"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724925.987682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/AppDelegate.swift"
-            timestampString = "523724927.92956"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/Expense.swift"
-            timestampString = "525745120.161517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "Expense"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

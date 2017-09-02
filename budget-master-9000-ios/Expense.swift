@@ -12,10 +12,8 @@ class Expense: Object {
     dynamic var expenseDescription:String?
     dynamic var expenseDate:String?
     dynamic var userId:String?
-    dynamic var username:String?
-
     
-    convenience init(_ id:Int, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String, _ username:String){
+    convenience init(_ id:Int, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String){
         self.init()
         self.id = id
         self.location = location
@@ -24,8 +22,6 @@ class Expense: Object {
         self.expenseDescription = expenseDescription
         self.expenseDate = expenseDate
         self.userId = userId
-        self.username = username
-
     }
 
     
@@ -41,8 +37,8 @@ class Expense: Object {
             let expenseDescription = expense["description"] as? String ?? ""
             let expenseDate = expense["expenseDate"] as? String ?? ""
             let userId = expense["userId"] as? String ?? ""
-            //get username
-            return Expense(id, location, cost, expenseType, expenseDescription, expenseDate, userId, "")
+
+            return Expense(id, location, cost, expenseType, expenseDescription, expenseDate, userId)
 
         }
         
@@ -61,8 +57,7 @@ class Expense: Object {
 
     static func loadExpenses() -> [Expense]{
         let realm = try! Realm()
-        let username = AppState.shared.user.name
-        return realm.objects(Expense.self).filter{$0.username == username}.map{$0}
+        return realm.objects(Expense.self).filter{$0.userId == AppState.shared.user.name}.map{$0}
     }
     
     static func save(_ expense: Expense) {

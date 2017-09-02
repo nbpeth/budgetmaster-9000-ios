@@ -19,12 +19,10 @@ class BaseViewController: UIViewController, ServiceDelgateable {
         return false
     }
     
-    func success(response: [String : AnyObject]?) {
-        
+    func success(response: [String : AnyObject]?) {        
     }
     
     func fail(_ message: String) {
-        print("FAIL \(message)")
     }
 
 }
