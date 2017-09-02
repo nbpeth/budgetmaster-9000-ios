@@ -65,8 +65,11 @@ class HomeViewController: BaseViewController {
     }
     
     fileprivate func loadStatsData(){
-        BudgetMasterService(delegate: self).fetchWeekData(weekOffSet: page)
+        
     }
+//    fileprivate func loadStatsData(){
+//        BudgetMasterService(delegate: self).fetchWeekData(weekOffSet: page)
+//    }
     
     fileprivate func configureRemainingMoneyLabel(_ stats: [String:AnyObject]){
         guard let sum = stats["sum"] as? Double,

@@ -25,6 +25,7 @@
 		2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */; };
 		2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */; };
 		2CE865921F0AF24500DF8E64 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */; };
+		2CEE07091F577EF200B6D8BA /* ExpenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE07081F577EF200B6D8BA /* ExpenseService.swift */; };
 		2CF433691F09791100ECEBC8 /* BudgetMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433681F09791100ECEBC8 /* BudgetMasterService.swift */; };
 		2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336A1F097A3B00ECEBC8 /* User.swift */; };
 		2CF433701F0982D900ECEBC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336F1F0982D900ECEBC8 /* LoginViewController.swift */; };
@@ -54,6 +55,7 @@
 		2CD77F791F099E3000342FA9 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		2CD77F7B1F099EB100342FA9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		2CEE07081F577EF200B6D8BA /* ExpenseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseService.swift; sourceTree = "<group>"; };
 		2CF433681F09791100ECEBC8 /* BudgetMasterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetMasterService.swift; sourceTree = "<group>"; };
 		2CF4336A1F097A3B00ECEBC8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CF4336F1F0982D900ECEBC8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				2CB7F2401F0ADF5600C62B19 /* Expense.swift */,
 				2CE865911F0AF24500DF8E64 /* ExpenseTableViewCell.swift */,
 				2CADFACF1F0C073F009081B9 /* CreateExpenseTableViewController.swift */,
+				2CEE07081F577EF200B6D8BA /* ExpenseService.swift */,
 			);
 			name = expense;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEE07091F577EF200B6D8BA /* ExpenseService.swift in Sources */,
 				2CF433701F0982D900ECEBC8 /* LoginViewController.swift in Sources */,
 				2C77D9CE1F0DB85400CF4F1A /* StatsTableViewCell.swift in Sources */,
 				2C03ED401F11608400FBABD4 /* MoreTableViewController.swift in Sources */,

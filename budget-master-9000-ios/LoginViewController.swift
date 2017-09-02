@@ -26,7 +26,7 @@ class LoginViewController: BaseViewController, GIDSignInUIDelegate {
     }
     
     func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-//        activitySpinner.stopAnimating()
+
     }
     
     func sign(_ signIn: GIDSignIn!,

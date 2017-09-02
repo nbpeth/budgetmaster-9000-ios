@@ -41,28 +41,44 @@ class BudgetMasterService {
         }
     }
     
-    func delete(expense:Expense){
-        guard let delegate = self.delegate,
-            let id = expense.id
-            else { return }
-        
-        let url = "\(uri)/expenses/\(String(describing: currentUser?.email ?? ""))/\(String(describing: id))"
-        Alamofire.request(url, method: HTTPMethod.delete, parameters: expense.toDictionary() ,headers: headers).responseJSON { response in
-            if response.result.error != nil  {
-                delegate.fail("Delete Failed")
-                
-            } else {
-                delegate.success(response: nil)
+//    func delete(expense:Expense){
+//        guard let delegate = self.delegate,
+//            let id = expense.id
+//            else { return }
+//        
+//        let url = "\(uri)/expenses/\(String(describing: currentUser?.email ?? ""))/\(String(describing: id))"
+//        Alamofire.request(url, method: HTTPMethod.delete, parameters: expense.toDictionary() ,headers: headers).responseJSON { response in
+//            if response.result.error != nil  {
+//                delegate.fail("Delete Failed")
+//                
+//            } else {
+//                delegate.success(response: nil)
+//            }
+//        }
+//    }
+    
+    //network
+    func fetchExpenses(page:Int, limit: Int) {
+        guard let delegate = self.delegate else { return }
+        let username = currentUser?.email
+        let url = "\(uri)/expenses/\(username ?? "")?page=\(page)&limit=\(limit)"
+
+        Alamofire.request(url, method: HTTPMethod.get, headers: headers).responseJSON { response in
+            if response.result.error != nil {
+                delegate.fail(self.serverDownError)
+            }
+            else {
+                guard let dictionary = response.result.value as? [String:AnyObject] else { return }
+                delegate.success(response: dictionary)
             }
         }
     }
     
-    //network
     func fetchExpenses(page:Int) {
         guard let delegate = self.delegate else { return }
         let username = currentUser?.email
         let url = "\(uri)/expenses/\(username ?? "")?page=\(page)"
-
+        
         Alamofire.request(url, method: HTTPMethod.get, headers: headers).responseJSON { response in
             if response.result.error != nil {
                 delegate.fail(self.serverDownError)

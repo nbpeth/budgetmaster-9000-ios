@@ -7,7 +7,6 @@ class User: Object {
     dynamic var name:String?
     dynamic var authToken:String?
     let spendingThreshold = RealmOptional<Int>()
-    let income = RealmOptional<Double>()
     
     func buildUserFrom(dictionary:[String:Any]) -> User {
         let user = User()

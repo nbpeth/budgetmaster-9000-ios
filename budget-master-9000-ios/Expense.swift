@@ -5,25 +5,40 @@ import GoogleSignIn
 
 class Expense: Object {
     
-    var id:Int?
-    var cost:Double?
+    var id = RealmOptional<Int>()
+    var cost = RealmOptional<Double>()
     dynamic var location:String?
     dynamic var expenseType:String?
     dynamic var expenseDescription:String?
     dynamic var expenseDate:String?
     dynamic var userId:String?
     
-    convenience init(_ id:Int, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String){
+    convenience init(_ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String){
         self.init()
-        self.id = id
+        self.id = getNextId()
         self.location = location
-        self.cost = cost
+        self.cost = RealmOptional<Double>(cost)
         self.expenseType = expenseType
         self.expenseDescription = expenseDescription
         self.expenseDate = expenseDate
         self.userId = userId
     }
-
+    
+    convenience init(_ id: Int?, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:String, _ userId:String){
+        self.init()
+        self.id = RealmOptional<Int>(id)
+        self.location = location
+        self.cost = RealmOptional<Double>(cost)
+        self.expenseType = expenseType
+        self.expenseDescription = expenseDescription
+        self.expenseDate = expenseDate
+        self.userId = userId
+    }
+    
+    func getNextId() -> RealmOptional<Int> {
+        let realm = try! Realm()
+        return RealmOptional<Int>((realm.objects(Expense.self).max(ofProperty: "id") as Int? ?? 0) + 1)
+    }
     
     static func createFrom(dictionary:[String:AnyObject]) -> [Expense]{
         
@@ -55,9 +70,11 @@ class Expense: Object {
         ]
     }
 
+    //sort by id
     static func loadExpenses() -> [Expense]{
         let realm = try! Realm()
         return realm.objects(Expense.self).filter{$0.userId == AppState.shared.user.name}.map{$0}
+
     }
     
     static func save(_ expense: Expense) {
@@ -73,4 +90,5 @@ class Expense: Object {
             realm.delete(expense)
         }
     }
+    
 }

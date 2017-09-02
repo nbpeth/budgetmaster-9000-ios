@@ -1,6 +1,7 @@
 
 import UIKit
 import GoogleSignIn
+import RealmSwift
 
 class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDelegate, UIPickerViewDataSource, ServiceDelgateable, UITextFieldDelegate {
     
@@ -19,7 +20,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     var hideTypePicker = true
     var hideDatePicker = true
     
-    //extract
     let types = ["Clothing","Household Supplies","Groceries","Entertainment","Health and Fitness","Medical","Miscellaneous","Restaurant"]
     
     override func viewDidLoad() {
@@ -49,16 +49,13 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         
         submitButton.isHidden = true
         
-        let expense = Expense()
-        expense.userId = currentUser?.profile?.email
-        expense.cost = cost
-        expense.location = location
-        expense.expenseType = expenseType
-        expense.expenseDate = formatDate(expenseDatePicker.date)
+        guard let email = currentUser?.profile?.email else { return }
         
-
-        BudgetMasterService(delegate: self).submit(expense: expense)
+        let expense = Expense(location, cost, expenseType, "", formatDate(expenseDatePicker.date), email)
         
+        Expense.save(expense)
+        
+        resetFormFields()        
     }
     
     func formatDate(_ date:Date) -> String {
@@ -99,11 +96,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
         return myTitle
     }
-    
-//    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return types[row]
-//    }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         expenseTypeDetailLabel.text = types[row]
         selectedExpenseType = types[row]
@@ -147,8 +140,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     }
     
     func fail(_ message: String) {
-        print("FAIL!!!")
-
         resetFormFields()
     }
     

@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //having issues getting clientId from API, fix me
+
         GIDSignIn.sharedInstance().clientID = "559785174037-t1mifh0tkkebo55e4v26fhiqtb70a84k.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self as GIDSignInDelegate
 

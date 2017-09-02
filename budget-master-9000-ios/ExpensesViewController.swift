@@ -13,37 +13,39 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         expensesTableView.delegate = self
         expensesTableView.dataSource = self
-        activityIndicator.startAnimating()
         self.expensesTableView.backgroundColor = Colors.background
     
-        loadExpenses()
         configureRefreshControl()
+        loadExpenses()
         
     }
     
-    func loadExpenses(){
-        BudgetMasterService(delegate: self).fetchExpenses(page: page)
-    }
-    
-    override  func success(response: [String : AnyObject]?) {
-        guard let dictionary = response,
-            let elements = dictionary["totalElements"] as? Int else {
-                return
-        }
-        
-        activityIndicator.stopAnimating()
+    func loadExpenses() {
+        activityIndicator.startAnimating()
+        self.expenses = Expense.loadExpenses()
         self.refreshControl.endRefreshing()
-        
-        let expenses = Expense.createFrom(dictionary: dictionary)
-        self.expenses += expenses
-        self.totalElements = elements
-        
+        self.expensesTableView.reloadData()
+        activityIndicator.stopAnimating()
+    }
+    
+    override func success(response: [String : AnyObject]?) {
+//        guard let dictionary = response,
+//            let elements = dictionary["totalElements"] as? Int else {
+//                return
+//        }
+//        
+//        activityIndicator.stopAnimating()
+//        self.refreshControl.endRefreshing()
+//        
+//        let expenses = Expense.createFrom(dictionary: dictionary)
+//        self.expenses += expenses
+//        self.totalElements = elements
+//        
         self.expensesTableView.reloadData()
     }
     
     override func fail(_ message: String) {
         self.expensesTableView.reloadData()
-        print(message)
     }
     
     
@@ -55,8 +57,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         if(editingStyle == .delete){
             let expense = expenses[indexPath.row]
             expenses.remove(at: indexPath.row)
-
-            BudgetMasterService(delegate: self).delete(expense: expense)
+            Expense.delete(expense)
             self.expensesTableView.reloadData()
         }
     }
@@ -81,7 +82,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         
         let expense = expenses[row]
         let expenseType = expense.expenseType ?? ""
-        let cost = expense.cost ?? 0.00
+        let cost = expense.cost.value ?? 0.00
         
         cell.locationLabel.text = expense.location
         cell.expenseDateLabel.text = expense.expenseDate
@@ -102,7 +103,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         refreshControl.addTarget(self, action: #selector(ExpensesViewController.refresh(sender:)), for: .valueChanged)
         expensesTableView.addSubview(refreshControl)
     }
-    
+
     func refresh(sender:AnyObject) {
         page = 0
         expenses = []
