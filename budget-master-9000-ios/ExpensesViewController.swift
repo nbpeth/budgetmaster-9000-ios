@@ -24,26 +24,23 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
     func loadExpenses() {
         activityIndicator.startAnimating()
         
-        self.expenses = Expense.loadExpenses()
-        self.refreshControl.endRefreshing()
-        self.expensesTableView.reloadData()
-        
-        activityIndicator.stopAnimating()
+        BudgetMasterService(delegate: self).fetchExpenses(page: page)
+
     }
     
     override func success(response: [String : AnyObject]?) {
-//        guard let dictionary = response,
-//            let elements = dictionary["totalElements"] as? Int else {
-//                return
-//        }
-//        
-//        activityIndicator.stopAnimating()
-//        self.refreshControl.endRefreshing()
-//        
-//        let expenses = Expense.createFrom(dictionary: dictionary)
-//        self.expenses += expenses
-//        self.totalElements = elements
-//        
+        guard let dictionary = response,
+            let elements = dictionary["totalElements"] as? Int else {
+                return
+        }
+        
+        activityIndicator.stopAnimating()
+        self.refreshControl.endRefreshing()
+        
+        let expenses = Expense.createFrom(dictionary: dictionary)
+        self.expenses += expenses
+        self.totalElements = elements
+        
         self.expensesTableView.reloadData()
     }
     
@@ -60,7 +57,8 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         if(editingStyle == .delete){
             let expense = expenses[indexPath.row]
             expenses.remove(at: indexPath.row)
-            expenseService?.delete(expense)
+//            expenseService?.delete(expense)
+            BudgetMasterService(delegate:self).delete(expense: expense)
             self.expensesTableView.reloadData()
         }
     }
@@ -75,7 +73,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
             
         else { fatalError() }
         
-//        loadNextPage(row: indexPath.row)
+        loadNextPage(row: indexPath.row)
         
         return formatCell(cell, row: indexPath.row)
     }
@@ -114,10 +112,10 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         loadExpenses()
     }
     
-//    fileprivate func loadNextPage(row:Int){
-//        if( row < totalElements - 1 && row >= self.expenses.count - 1){
-//            page += 1
-//            BudgetMasterService(delegate: self).fetchExpenses(page: page)
-//        }
-//    }
+    fileprivate func loadNextPage(row:Int){
+        if( row < totalElements - 1 && row >= self.expenses.count - 1){
+            page += 1
+            BudgetMasterService(delegate: self).fetchExpenses(page: page)
+        }
+    }
 }

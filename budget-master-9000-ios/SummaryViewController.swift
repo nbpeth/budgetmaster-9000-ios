@@ -13,7 +13,6 @@ class SummaryViewController: BaseViewController, UITableViewDelegate, UITableVie
         
 //        BudgetMasterService(delegate: self).fetchStatistics()
 
-
     }
 
     override func didReceiveMemoryWarning() {

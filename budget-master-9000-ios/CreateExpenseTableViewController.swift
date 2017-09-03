@@ -53,6 +53,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         
         let expense = Expense(location, cost, expenseType, "", formatDate(expenseDatePicker.date), email)
         
+        BudgetMasterService(delegate: self).submit(expense: expense)
         expenseService?.save(expense)
         
         resetFormFields()        
@@ -140,6 +141,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     }
     
     func fail(_ message: String) {
+
         resetFormFields()
     }
     
