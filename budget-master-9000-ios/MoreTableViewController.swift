@@ -20,7 +20,6 @@ class MoreTableViewController: BaseTableViewController {
         
     }
 
-
     @IBAction func signoutButtonWasPressed(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
         

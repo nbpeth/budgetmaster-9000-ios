@@ -7,6 +7,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var costTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var expenseTypePicker: UIPickerView!
     @IBOutlet weak var expenseDatePicker: UIDatePicker!
     @IBOutlet weak var expenseTypePickerCell: UITableViewCell!
@@ -51,7 +52,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         
         guard let email = currentUser?.profile?.email else { return }
         
-        let expense = Expense(location, cost, expenseType, "", formatDate(expenseDatePicker.date), email)
+        let expense = Expense(location, cost, expenseType, descriptionTextField.text ?? "", formatDate(expenseDatePicker.date), email)
         
         BudgetMasterService(delegate: self).submit(expense: expense)
         expenseService?.save(expense)
@@ -131,7 +132,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
             return 2
         }
         else if(section == 0) {
-            return 2
+            return 3
         }
         return 1
     }

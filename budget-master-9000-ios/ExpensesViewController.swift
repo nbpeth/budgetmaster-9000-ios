@@ -78,6 +78,14 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         return formatCell(cell, row: indexPath.row)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let destination = storyboard.instantiateViewController(withIdentifier: "ExpenseDetailViewController") as? ExpenseDetailViewController {
+            
+            destination.expense = expenses[indexPath.row]
+            self.navigationController?.pushViewController(destination, animated: true)
+        }
+    }
 
     fileprivate func formatCell(_ cell:ExpenseTableViewCell, row:Int) -> ExpenseTableViewCell{
         
@@ -85,11 +93,17 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         let expenseType = expense.expenseType ?? ""
         let cost = expense.cost.value ?? 0.00
         
+        let theme = ExpenseTypeTheme().themeFor(type:expenseType, with: 0.8)
+        
         cell.locationLabel.text = expense.location
         cell.expenseDateLabel.text = expense.expenseDate
         cell.costLabel.text = "$\(cost)"
-        cell.expenseColorView.backgroundColor = Colors.colorFor(expenseType, opacity: 0.2)
+        cell.expenseColorView.backgroundColor = theme.color
+        cell.imageView?.image = theme.image!.withRenderingMode(.alwaysTemplate)
+        cell.imageView?.tintColor = theme.color
+        cell.imageView?.contentMode = .scaleAspectFit
         
+
         cell.backgroundColor = row % 2 == 0 ? Colors.cellBackground : Colors.cellBackgroundDark
         
         return cell
@@ -105,7 +119,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         expensesTableView.addSubview(refreshControl)
     }
 
-    func refresh(sender:AnyObject) {
+    @objc fileprivate func refresh(sender:AnyObject) {
         page = 0
         expenses = []
         self.expensesTableView.reloadData()
