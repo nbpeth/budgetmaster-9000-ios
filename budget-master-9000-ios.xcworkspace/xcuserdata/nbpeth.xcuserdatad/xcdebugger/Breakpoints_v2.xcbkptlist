@@ -6,33 +6,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "budget-master-9000-ios/CreateExpenseTableViewController.swift"
-            timestampString = "526153292.980336"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "submitButtonWasPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "budget-master-9000-ios/ExpenseDetailViewController.swift"
-            timestampString = "526167465.795248"
+            timestampString = "527291156.378963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "configureLabels()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budget_master_9000_ios.ExpenseDetailViewController.(configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A) () -&gt; ()"
+                  moduleName = "budget-master-9000-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/ExpenseDetailViewController.swift"
+                  timestampString = "527291372.064043"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "2564">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "budget_master_9000_ios.ExpenseDetailViewController.((configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A) () -&gt; ()).(implicit closure #1)"
+                  moduleName = "budget-master-9000-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/ExpenseDetailViewController.swift"
+                  timestampString = "527291372.066999"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

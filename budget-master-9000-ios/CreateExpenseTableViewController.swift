@@ -142,8 +142,14 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     }
     
     func fail(_ message: String) {
-
+        presentFailureAlert()
         resetFormFields()
+    }
+    
+    func presentFailureAlert(){
+        let alert = UIAlertController(title: "Unable to Create Expense", message: "An error occurred. Please try again later.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func resetFormFields(){
@@ -154,6 +160,7 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         hideDatePicker = true
         selectedExpenseType = ExpenseTypes.types[0]
         expenseTypeDetailLabel.text = ExpenseTypes.types[0]
+        descriptionTextField.text = ""
         self.tableView.reloadData()
     }
 }

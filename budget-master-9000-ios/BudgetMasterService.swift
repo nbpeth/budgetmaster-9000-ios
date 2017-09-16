@@ -10,7 +10,6 @@ protocol ServiceDelgateable{
 }
 
 class BudgetMasterService {
-    //extract promotion vars to schemes
     let uri = "http://34.233.161.220:8080"
 //    let uri = "http://localhost:8080"
     

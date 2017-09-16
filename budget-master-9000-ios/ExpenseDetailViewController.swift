@@ -1,13 +1,13 @@
 import UIKit
 import Foundation
 
-class ExpenseDetailViewController: BaseViewController {
-    @IBOutlet weak var costLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var detailsTitleLabel: UILabel!
+class ExpenseDetailViewController: BaseTableViewController {
+
     
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     var expense: Expense?
     
     override func viewDidLoad() {
@@ -25,12 +25,9 @@ class ExpenseDetailViewController: BaseViewController {
         locationLabel.text = location
         dateLabel.text = date
         
-        if expense?.expenseDescription != nil {
-            detailsTitleLabel.isHidden = false
-            descriptionLabel.isHidden = false
-            descriptionLabel.text = expense?.expenseDescription ?? ""
+        descriptionLabel.text = expense?.expenseDescription ?? ""
 
-        }
+        
     }
     
 }

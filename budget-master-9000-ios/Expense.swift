@@ -65,7 +65,8 @@ class Expense: Object {
             "location":self.location as AnyObject,
             "cost":self.cost as AnyObject,
             "expenseType":self.expenseType as AnyObject,
-            "expenseDate":self.expenseDate as AnyObject
+            "expenseDate":self.expenseDate as AnyObject,
+            "description":self.expenseDescription as AnyObject
 //            "userId":self.userId as AnyObject
         ]
     }
