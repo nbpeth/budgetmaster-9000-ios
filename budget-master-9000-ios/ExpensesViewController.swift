@@ -11,43 +11,38 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        expenseService = ExpenseService(delegate: self)
         expensesTableView.delegate = self
         expensesTableView.dataSource = self
         self.expensesTableView.backgroundColor = Colors.background
-    
+        self.expenseService = ExpenseService(delegate: self)
+        
         configureRefreshControl()
-        loadExpenses()
         
     }
     
     func loadExpenses() {
         activityIndicator.startAnimating()
-        
-        BudgetMasterService(delegate: self).fetchExpenses(page: page)
+        expenseService?.load()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadExpenses()
+    }
+    
+    override func success(response: Week) {
+        self.refreshControl.endRefreshing()
+        self.activityIndicator.stopAnimating()
+        self.expenses = response.expenses
+        self.expensesTableView.reloadData()
 
     }
     
-    override func success(response: [String : AnyObject]?) {
-        guard let dictionary = response,
-            let elements = dictionary["totalElements"] as? Int else {
-                return
-        }
-        
-        activityIndicator.stopAnimating()
-        self.refreshControl.endRefreshing()
-        
-        let expenses = Expense.createFrom(dictionary: dictionary)
-        self.expenses += expenses
-        self.totalElements = elements
-        
-        self.expensesTableView.reloadData()
-    }
-    
     override func fail(_ message: String) {
+        self.refreshControl.endRefreshing()
+        self.activityIndicator.stopAnimating()
         self.expensesTableView.reloadData()
     }
-    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -57,8 +52,8 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         if(editingStyle == .delete){
             let expense = expenses[indexPath.row]
             expenses.remove(at: indexPath.row)
-//            expenseService?.delete(expense)
-            BudgetMasterService(delegate:self).delete(expense: expense)
+            expenseService?.delete(expense)
+
             self.expensesTableView.reloadData()
         }
     }
@@ -72,9 +67,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? ExpenseTableViewCell
             
         else { fatalError() }
-        
-        loadNextPage(row: indexPath.row)
-        
+                
         return formatCell(cell, row: indexPath.row)
     }
     
@@ -93,10 +86,14 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         let expenseType = expense.expenseType ?? ""
         let cost = expense.cost.value ?? 0.00
         
-        let theme = ExpenseTypeTheme().themeFor(type:expenseType, with: 0.8)
+        var date = ""
+        if let expenseDate = expense.expenseDate {
+            date = Utils.formatDate(expenseDate)
+        }
         
+        let theme = ExpenseTypeTheme().themeFor(type:expenseType, with: 0.8)
         cell.locationLabel.text = expense.location
-        cell.expenseDateLabel.text = expense.expenseDate
+        cell.expenseDateLabel.text = date
         cell.costLabel.text = "$\(cost)"
         cell.expenseColorView.backgroundColor = theme.color
         cell.imageView?.image = theme.image!.withRenderingMode(.alwaysTemplate)
@@ -110,6 +107,10 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
 
     }
     
+    @objc fileprivate func refresh(sender:AnyObject) {
+        loadExpenses()
+    }
+    
     fileprivate func configureRefreshControl(){
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -117,19 +118,5 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         refreshControl.backgroundColor = UIColor.lightGray
         refreshControl.addTarget(self, action: #selector(ExpensesViewController.refresh(sender:)), for: .valueChanged)
         expensesTableView.addSubview(refreshControl)
-    }
-
-    @objc fileprivate func refresh(sender:AnyObject) {
-        page = 0
-        expenses = []
-        self.expensesTableView.reloadData()
-        loadExpenses()
-    }
-    
-    fileprivate func loadNextPage(row:Int){
-        if( row < totalElements - 1 && row >= self.expenses.count - 1){
-            page += 1
-            BudgetMasterService(delegate: self).fetchExpenses(page: page)
-        }
     }
 }

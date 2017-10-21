@@ -13,6 +13,4 @@ class ExpenseTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
-
 }

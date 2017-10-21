@@ -10,43 +10,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "budget-master-9000-ios/ExpenseDetailViewController.swift"
-            timestampString = "527291156.378963"
+            timestampString = "529110602.143145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureLabels()"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.ExpenseDetailViewController.(configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A) () -&gt; ()"
+                  symbolName = "budget_master_9000_ios.ExpenseDetailViewController.(configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A)() -&gt; ()"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/ExpenseDetailViewController.swift"
-                  timestampString = "527291372.064043"
+                  timestampString = "530298535.771005"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "2564">
+                  offsetFromSymbolStart = "2421">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "budget_master_9000_ios.ExpenseDetailViewController.((configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A) () -&gt; ()).(implicit closure #1)"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in budget_master_9000_ios.ExpenseDetailViewController.(configureLabels in _C521D0C4E2FBAD732C059E55D9F9CC7A)() -&gt; ()"
                   moduleName = "budget-master-9000-ios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nbpeth/Documents/projects/budget-master-9000-ios/budget-master-9000-ios/ExpenseDetailViewController.swift"
-                  timestampString = "527291372.066999"
+                  timestampString = "530298535.773661"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>

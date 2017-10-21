@@ -1,83 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jej-Ff-rav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xcz-qa-cYS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="nid-an-khC">
-            <objects>
-                <navigationController id="Jej-Ff-rav" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sPK-QO-AHc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0si-74-ofz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mAb-gg-PGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1225" y="-16"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="loginViewController" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="budget_master_9000_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPn-h1-BqS">
-                                <rect key="frame" x="69" y="315" width="237" height="38"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cC-Oc-xlX">
-                                <rect key="frame" x="145" y="354" width="85" height="41"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
-                                <color key="textColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMw-0l-1CQ" customClass="GIDSignInButton">
-                                <rect key="frame" x="69" y="410" width="237" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="sWR-5E-mew"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="CPn-h1-BqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qp-2z-VDr"/>
-                            <constraint firstItem="3cC-Oc-xlX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNt-zd-bnD"/>
-                            <constraint firstItem="wMw-0l-1CQ" firstAttribute="leading" secondItem="CPn-h1-BqS" secondAttribute="leading" id="Hh5-Op-JYw"/>
-                            <constraint firstItem="wMw-0l-1CQ" firstAttribute="top" secondItem="3cC-Oc-xlX" secondAttribute="bottom" constant="15" id="Z8l-zx-H1A"/>
-                            <constraint firstItem="3cC-Oc-xlX" firstAttribute="top" secondItem="CPn-h1-BqS" secondAttribute="bottom" constant="1" id="iYF-qY-b7U"/>
-                            <constraint firstItem="wMw-0l-1CQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJQ-nS-nS2"/>
-                            <constraint firstItem="CPn-h1-BqS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w7P-nE-Vyd"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="HJM-D0-Llr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-327.19999999999999" y="-16.641679160419791"/>
-        </scene>
         <!--Home-->
         <scene sceneID="ixN-CM-F9k">
             <objects>
@@ -91,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-vl-JdS" customClass="CircleProgressView" customModule="budget_master_9000_ios" customModuleProvider="target">
-                                <rect key="frame" x="8" y="153" width="360" height="360"/>
+                                <rect key="frame" x="8" y="173" width="360" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -107,17 +45,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Bud Manstrong!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrH-iI-5Du">
-                                <rect key="frame" x="18" y="41" width="338" height="21"/>
+                                <rect key="frame" x="18" y="61" width="338" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-uT-AU0">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
                                 <color key="color" red="0.41544011019999999" green="1" blue="0.48542121770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yr-BkS">
-                                <rect key="frame" x="188" y="333" width="0.0" height="0.0"/>
+                                <rect key="frame" x="188" y="343" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" red="0.41544011019999999" green="1" blue="0.48542121770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -203,19 +141,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8b-zL-4yr" id="DkI-aB-JJW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-1R-syx">
-                                                    <rect key="frame" x="16" y="5" width="341" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <state key="normal" title="Sign Out">
-                                                        <color key="titleColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="signoutButtonWasPressed:" destination="qWr-KX-dfi" eventType="touchUpInside" id="NZJ-Mo-k3H"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                             <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -271,7 +196,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="more" id="X8f-fJ-W1b"/>
                     <connections>
-                        <outlet property="signOutButton" destination="8jl-1R-syx" id="dVu-Ph-GpZ"/>
                         <outlet property="spendingThresholdLabel" destination="Yj9-c4-rJB" id="7wP-JV-ssN"/>
                     </connections>
                 </tableViewController>
@@ -466,7 +390,7 @@
                     <tabBarItem key="tabBarItem" title="Expenses" image="ic_attach_money_36pt" id="oFj-Ay-jud"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="yx2-WL-h5B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -700,7 +624,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Expense Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UOc-QL-y71">
-                                                    <rect key="frame" x="15" y="12" width="105.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="105.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -756,7 +680,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Expense Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f4f-Iz-KYE">
-                                                    <rect key="frame" x="15" y="12" width="140" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="140" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -852,6 +776,7 @@
         <scene sceneID="8Mb-7k-IUZ">
             <objects>
                 <tabBarController storyboardIdentifier="tabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xcz-qa-cYS" customClass="TabCarController" customModule="budget_master_9000_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q84-bv-Mg7"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="d1r-Kf-1cK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -868,7 +793,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssw-oj-vs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="-17"/>
+            <point key="canvasLocation" x="308" y="-105"/>
         </scene>
     </scenes>
     <resources>

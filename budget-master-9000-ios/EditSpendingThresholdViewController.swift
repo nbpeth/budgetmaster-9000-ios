@@ -3,7 +3,6 @@ import RealmSwift
 import GoogleSignIn
 
 class EditSpendingThresholdViewController: BaseViewController, UITextFieldDelegate {
-
     @IBOutlet weak var spendingThresholdTextField: UITextField!
 
     @IBAction func saveButtonWasPressed(_ sender: Any) {
@@ -23,7 +22,6 @@ class EditSpendingThresholdViewController: BaseViewController, UITextFieldDelega
         
         AppState.shared.updateUser(user)
         
-        //because autologin is creating a navigation bar, fix me
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
@@ -44,7 +42,4 @@ class EditSpendingThresholdViewController: BaseViewController, UITextFieldDelega
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-
 }

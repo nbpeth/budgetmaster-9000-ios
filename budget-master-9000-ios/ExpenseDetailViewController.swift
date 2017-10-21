@@ -23,7 +23,7 @@ class ExpenseDetailViewController: BaseTableViewController {
             else { return }
         costLabel.text = String(describing: "$\(cost)")
         locationLabel.text = location
-        dateLabel.text = date
+        dateLabel.text = String(describing: date)
         
         descriptionLabel.text = expense?.expenseDescription ?? ""
 

@@ -9,7 +9,6 @@ final class AppState {
     static let shared = AppState()
     
     var user:User = User()
-    var authToken:String = ""
     
     func saveUser(_ user:User){
         let realm = try! Realm()
@@ -21,15 +20,10 @@ final class AppState {
     func updateUser(_ user: User){
         self.user = user
     }
-    
 
     func getUser() -> User {
         let realm = try! Realm()
-        
-        guard let username = GIDSignIn.sharedInstance().currentUser.profile.email,
-            let user = realm.objects(User.self).filter({ $0.name == username }).first else { return User() }
-        
-        
+        guard let user = realm.objects(User.self).first else { return User() }
         return user
     }
     

@@ -1,7 +1,6 @@
 
 import UIKit
 
-
 class BaseViewController: UIViewController, ServiceDelgateable {
     var expenseService: ExpenseService?
     
@@ -18,16 +17,18 @@ class BaseViewController: UIViewController, ServiceDelgateable {
     override var shouldAutorotate: Bool {
         return false
     }
+
+    func success(response: Week) {
+    }
     
-    func success(response: [String : AnyObject]?) {        
+    func success(response: [Expense]) {
     }
     
     func fail(_ message: String) {
     }
-
 }
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController, ServiceDelgateable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Colors.background
@@ -40,6 +41,15 @@ class BaseTableViewController: UITableViewController {
     
     override var shouldAutorotate: Bool {
         return false
+    }
+    
+    func success(response: Week) {
+    }
+    
+    func success(response: [Expense]) {
+    }
+    
+    func fail(_ message: String) {
     }
 }
 
@@ -58,8 +68,10 @@ class BasePagingViewController: UIPageViewController, ServiceDelgateable {
         return false
     }
     
-    func success(response: [String : AnyObject]?) {
-        
+    func success(response: Week) {
+    }
+    
+    func success(response: [Expense]) {
     }
     
     func fail(_ message: String) {

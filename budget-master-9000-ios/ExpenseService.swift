@@ -16,13 +16,13 @@ class ExpenseService {
         Expense.delete(expense)
     }
     
-    func load() -> [Expense] {
-        return [Expense]()
+    func load() {
+        guard let expenses = Expense.loadExpenses() else { delegate?.fail("could not load expenses"); return }
+        delegate?.success(response: expenses)
     }
     
-    func syncWithServer() {
-        //todo
+    func loadWeekData(offset:Int) {
+        guard let week = Expense.loadWeekExpenses(offset:offset) else { delegate?.fail("could not load expenses"); return }
+        delegate?.success(response: week)
     }
-    
-    
 }

@@ -3,7 +3,7 @@ import UIKit
 import GoogleSignIn
 import RealmSwift
 
-class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDelegate, UIPickerViewDataSource, ServiceDelgateable, UITextFieldDelegate {
+class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var costTextField: UITextField!
@@ -50,27 +50,15 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         
         submitButton.isHidden = true
         
-        guard let email = currentUser?.profile?.email else { return }
+        let expense = Expense(location, cost, expenseType, descriptionTextField.text ?? "", expenseDatePicker.date, "budgetmasteruser")
         
-        let expense = Expense(location, cost, expenseType, descriptionTextField.text ?? "", formatDate(expenseDatePicker.date), email)
-        
-        BudgetMasterService(delegate: self).submit(expense: expense)
         expenseService?.save(expense)
         
         resetFormFields()        
     }
     
-    func formatDate(_ date:Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
-        let dateString = formatter.string(from: date)
-        
-        return dateString
-
-    }
-    
     func setExpenseDateLabel(){
-        expenseDateDetailLabel.text = formatDate(expenseDatePicker.date)
+        expenseDateDetailLabel.text = Utils.formatDate(expenseDatePicker.date)
     }
     
     @IBAction func expenseDatePickerDidChange(_ sender: Any) {
@@ -137,11 +125,11 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         return 1
     }
     
-    func success(response: [String : AnyObject]?) {
+    override func success(response: Week) {
         resetFormFields()
     }
     
-    func fail(_ message: String) {
+    override func fail(_ message: String) {
         presentFailureAlert()
         resetFormFields()
     }

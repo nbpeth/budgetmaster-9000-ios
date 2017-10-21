@@ -7,7 +7,6 @@ target 'budget-master-9000-ios' do
     use_frameworks!
     pod 'Alamofire', '~> 4.0'
     pod 'RealmSwift'
-    pod 'GoogleSignIn'
     # Pods for budget-master-9000-ios
     
 end

@@ -2,5 +2,5 @@
 import Foundation
 
 class ExpenseTypes {
-    static let types = ["Clothing","Household Supplies","Groceries","Entertainment","Health and Fitness","Medical","Miscellaneous","Restaurant","Travel"]
+    static let types = ["Groceries","Food and Drink","Household Supplies","Entertainment","Health and Fitness","Medical","Miscellaneous","Travel","Clothing"]
 }
