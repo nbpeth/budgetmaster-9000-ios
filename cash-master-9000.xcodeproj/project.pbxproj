@@ -43,7 +43,7 @@
 		2C50D4341F12970300761A10 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2C50D4361F12A4F300761A10 /* TabCarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCarController.swift; sourceTree = "<group>"; };
 		2C50D43A1F130F1200761A10 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		2C645B8C1F0978990011E925 /* budget-master-9000-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "budget-master-9000-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C645B8C1F0978990011E925 /* cash-master-9000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cash-master-9000.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C645B8F1F0978990011E925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C645B941F0978990011E925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C645B961F0978990011E925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		2C645B8D1F0978990011E925 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C645B8C1F0978990011E925 /* budget-master-9000-ios.app */,
+				2C645B8C1F0978990011E925 /* cash-master-9000.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C645B8B1F0978990011E925 /* budget-master-9000-ios */ = {
+		2C645B8B1F0978990011E925 /* cash-master-9000 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C645B9E1F0978990011E925 /* Build configuration list for PBXNativeTarget "budget-master-9000-ios" */;
+			buildConfigurationList = 2C645B9E1F0978990011E925 /* Build configuration list for PBXNativeTarget "cash-master-9000" */;
 			buildPhases = (
 				1CD170DCD56B0021D7C30022 /* [CP] Check Pods Manifest.lock */,
 				2C645B881F0978990011E925 /* Sources */,
@@ -225,9 +225,9 @@
 			);
 			dependencies = (
 			);
-			name = "budget-master-9000-ios";
+			name = "cash-master-9000";
 			productName = "budget-master-9000-ios";
-			productReference = 2C645B8C1F0978990011E925 /* budget-master-9000-ios.app */;
+			productReference = 2C645B8C1F0978990011E925 /* cash-master-9000.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2C645B871F0978990011E925 /* Build configuration list for PBXProject "budget-master-9000-ios" */;
+			buildConfigurationList = 2C645B871F0978990011E925 /* Build configuration list for PBXProject "cash-master-9000" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C645B8B1F0978990011E925 /* budget-master-9000-ios */,
+				2C645B8B1F0978990011E925 /* cash-master-9000 */,
 			);
 		};
 /* End PBXProject section */
@@ -522,7 +522,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C645B871F0978990011E925 /* Build configuration list for PBXProject "budget-master-9000-ios" */ = {
+		2C645B871F0978990011E925 /* Build configuration list for PBXProject "cash-master-9000" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C645B9C1F0978990011E925 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C645B9E1F0978990011E925 /* Build configuration list for PBXNativeTarget "budget-master-9000-ios" */ = {
+		2C645B9E1F0978990011E925 /* Build configuration list for PBXNativeTarget "cash-master-9000" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C645B9F1F0978990011E925 /* Debug */,

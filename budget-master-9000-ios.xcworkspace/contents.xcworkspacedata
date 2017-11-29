@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:budget-master-9000-ios.xcodeproj">
+      location = "group:/Users/nbpeth/Documents/projects/budget-master-9000-ios/cash-master-9000.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
