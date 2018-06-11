@@ -90,7 +90,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
     fileprivate func formatCell(_ cell:ExpenseTableViewCell, row:Int) -> ExpenseTableViewCell{
         
         let expense = expenses[row]
-        let expenseType = expense.expenseType ?? ""
+        let expenseType = expense.expenseType
         let cost = expense.cost.value ?? 0.00
         
         var date = ""
@@ -98,7 +98,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
             date = Utils.formatDate(expenseDate)
         }
         
-        let theme = ExpenseTypeTheme().themeFor(type:expenseType, with: 0.8)
+        let theme = ExpenseTypeTheme().themeFor(type:expenseType?.name ?? "", with: 0.8)
         cell.locationLabel.text = expense.location
         cell.expenseDateLabel.text = date
         cell.costLabel.text = "$\(cost)"
@@ -106,7 +106,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         cell.imageView?.image = theme.image!.withRenderingMode(.alwaysTemplate)
         cell.imageView?.tintColor = theme.color
         cell.imageView?.contentMode = .scaleAspectFit
-        
+    
 
         cell.backgroundColor = row % 2 == 0 ? Colors.cellBackground : Colors.cellBackgroundDark
         

@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-vl-JdS" customClass="CircleProgressView" customModule="cash_master_9000" customModuleProvider="target">
-                                <rect key="frame" x="8" y="153" width="360" height="360"/>
+                                <rect key="frame" x="8" y="72" width="360" height="360"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -40,11 +40,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-uT-AU0">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <rect key="frame" x="169" y="233.5" width="37" height="37"/>
                                 <color key="color" red="0.41544011019999999" green="1" blue="0.48542121770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yr-BkS">
-                                <rect key="frame" x="188" y="333" width="0.0" height="0.0"/>
+                                <rect key="frame" x="188" y="252" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" red="0.41544011019999999" green="1" blue="0.48542121770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -60,17 +60,17 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="hKM-V3-u1I" secondAttribute="trailing" constant="8" id="0ii-lc-hei"/>
+                            <constraint firstItem="c4f-vl-JdS" firstAttribute="top" secondItem="hKM-V3-u1I" secondAttribute="bottom" constant="25" id="1Q0-sS-r5u"/>
                             <constraint firstItem="c4f-vl-JdS" firstAttribute="leading" secondItem="jja-L4-izd" secondAttribute="leadingMargin" constant="-8" id="2bL-Lj-0hZ"/>
                             <constraint firstItem="hKM-V3-u1I" firstAttribute="leading" secondItem="jja-L4-izd" secondAttribute="leadingMargin" constant="10" id="53C-rc-LxV"/>
                             <constraint firstItem="ATS-uT-AU0" firstAttribute="centerX" secondItem="c4f-vl-JdS" secondAttribute="centerX" id="Kww-lu-GbV"/>
                             <constraint firstItem="hKM-V3-u1I" firstAttribute="top" secondItem="cVz-1E-ZPu" secondAttribute="bottom" constant="8" id="SfS-yk-n7X"/>
-                            <constraint firstItem="zCi-xm-7M8" firstAttribute="top" secondItem="c4f-vl-JdS" secondAttribute="bottom" constant="105" id="UE9-sN-9bI"/>
+                            <constraint firstItem="zCi-xm-7M8" firstAttribute="top" secondItem="c4f-vl-JdS" secondAttribute="bottom" constant="186" id="WOz-j4-E6F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c4f-vl-JdS" secondAttribute="trailing" constant="-9" id="aqa-4f-p5A"/>
                             <constraint firstItem="c4f-vl-JdS" firstAttribute="leading" secondItem="jja-L4-izd" secondAttribute="leadingMargin" constant="-8" id="hpI-Nd-J3D"/>
                             <constraint firstItem="TeG-Yr-BkS" firstAttribute="centerY" secondItem="c4f-vl-JdS" secondAttribute="centerY" id="nXN-me-8ey"/>
                             <constraint firstItem="ATS-uT-AU0" firstAttribute="centerY" secondItem="c4f-vl-JdS" secondAttribute="centerY" id="rIe-1I-eKH"/>
                             <constraint firstItem="TeG-Yr-BkS" firstAttribute="centerX" secondItem="c4f-vl-JdS" secondAttribute="centerX" id="yhU-gE-z7F"/>
-                            <constraint firstItem="c4f-vl-JdS" firstAttribute="top" secondItem="cVz-1E-ZPu" secondAttribute="bottom" constant="133" id="zqF-b4-gNj"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="6b1-8t-k5H" appends="YES" id="xq1-0i-GGt"/>

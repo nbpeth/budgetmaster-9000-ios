@@ -7,12 +7,12 @@ class Expense: Object {
     var id = RealmOptional<Int>()
     var cost = RealmOptional<Double>()
     dynamic var location:String?
-    dynamic var expenseType:String?
+    dynamic var expenseType:ExpenseType?
     dynamic var expenseDescription:String?
     dynamic var expenseDate:Date?
     dynamic var userId:String?
     
-    convenience init(_ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:Date, _ userId:String){
+    convenience init(_ location:String, _ cost:Double, _ expenseType:ExpenseType, _ expenseDescription:String, _ expenseDate:Date, _ userId:String){
         self.init()
         self.id = getNextId()
         self.location = location
@@ -23,7 +23,7 @@ class Expense: Object {
         self.userId = userId
     }
     
-    convenience init(_ id: Int?, _ location:String, _ cost:Double, _ expenseType:String, _ expenseDescription:String, _ expenseDate:Date, _ userId:String){
+    convenience init(_ id: Int?, _ location:String, _ cost:Double, _ expenseType:ExpenseType, _ expenseDescription:String, _ expenseDate:Date, _ userId:String){
         self.init()
         self.id = RealmOptional<Int>(id)
         self.location = location
