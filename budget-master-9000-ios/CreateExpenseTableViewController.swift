@@ -1,6 +1,5 @@
 
 import UIKit
-import GoogleSignIn
 import RealmSwift
 
 class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
@@ -16,7 +15,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     @IBOutlet weak var expenseTypeDetailLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     
-    let currentUser = GIDSignIn.sharedInstance().currentUser
     var selectedExpenseType:String?
     var hideTypePicker = true
     var hideDatePicker = true

@@ -1,6 +1,5 @@
 
 import UIKit
-import GoogleSignIn
 
 class SummaryViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var statsTableView: UITableView!

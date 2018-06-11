@@ -35,7 +35,14 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         self.activityIndicator.stopAnimating()
         self.expenses = response.expenses
         self.expensesTableView.reloadData()
-
+    }
+    
+    override func success(response: [Expense]) {
+        self.refreshControl.endRefreshing()
+        self.activityIndicator.stopAnimating()
+        self.expenses = response
+        self.expensesTableView.reloadData()
+        
     }
     
     override func fail(_ message: String) {

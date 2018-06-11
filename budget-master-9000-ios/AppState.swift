@@ -1,6 +1,5 @@
 import RealmSwift
 import Foundation
-import GoogleSignIn
 
 final class AppState {
     

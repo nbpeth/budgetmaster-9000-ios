@@ -1,6 +1,5 @@
 import UIKit
 import RealmSwift
-import GoogleSignIn
 
 class EditSpendingThresholdViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var spendingThresholdTextField: UITextField!

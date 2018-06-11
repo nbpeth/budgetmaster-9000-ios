@@ -33,11 +33,14 @@
 		2CEE07091F577EF200B6D8BA /* ExpenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE07081F577EF200B6D8BA /* ExpenseService.swift */; };
 		2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336A1F097A3B00ECEBC8 /* User.swift */; };
 		2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433721F098AF900ECEBC8 /* AppState.swift */; };
-		778464A1EB92FEB2257FD372 /* Pods_budget_master_9000_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */; };
+		8DA948FD9A0CED8DCC7EC3C5 /* Pods_cash_master_9000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cash_master_9000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A93A1C1F2D524B4D0541F3D /* Pods-cash-master-9000.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cash-master-9000.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cash-master-9000/Pods-cash-master-9000.debug.xcconfig"; sourceTree = "<group>"; };
 		1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.release.xcconfig"; sourceTree = "<group>"; };
+		1480C6A83B20DE5609510851 /* Pods-cash-master-9000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cash-master-9000.release.xcconfig"; path = "Pods/Target Support Files/Pods-cash-master-9000/Pods-cash-master-9000.release.xcconfig"; sourceTree = "<group>"; };
 		2C03ED3F1F11608400FBABD4 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		2C03ED431F1190E400FBABD4 /* EditSpendingThresholdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpendingThresholdViewController.swift; sourceTree = "<group>"; };
 		2C50D4341F12970300761A10 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		2CF4336A1F097A3B00ECEBC8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CF433721F098AF900ECEBC8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_budget_master_9000_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				778464A1EB92FEB2257FD372 /* Pods_budget_master_9000_ios.framework in Frameworks */,
+				8DA948FD9A0CED8DCC7EC3C5 /* Pods_cash_master_9000.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +195,7 @@
 		7C4B7B9713891CDD3C665DEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BEF48DE5FB4A7A8A35853631 /* Pods_budget_master_9000_ios.framework */,
+				03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +205,8 @@
 			children = (
 				7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */,
 				1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */,
+				0A93A1C1F2D524B4D0541F3D /* Pods-cash-master-9000.debug.xcconfig */,
+				1480C6A83B20DE5609510851 /* Pods-cash-master-9000.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -219,7 +223,6 @@
 				2C645B891F0978990011E925 /* Frameworks */,
 				2C645B8A1F0978990011E925 /* Resources */,
 				F7038A0892E307903040ACDA /* [CP] Embed Pods Frameworks */,
-				B67D9D542B5CF0F1C4C72A1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,29 +294,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-budget-master-9000-ios-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cash-master-9000-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B67D9D542B5CF0F1C4C72A1C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7038A0892E307903040ACDA /* [CP] Embed Pods Frameworks */ = {
@@ -322,26 +307,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-cash-master-9000/Pods-cash-master-9000-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cash-master-9000/Pods-cash-master-9000-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -493,7 +472,7 @@
 		};
 		2C645B9F1F0978990011E925 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */;
+			baseConfigurationReference = 0A93A1C1F2D524B4D0541F3D /* Pods-cash-master-9000.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CAFRP4KNJ;
@@ -507,7 +486,7 @@
 		};
 		2C645BA01F0978990011E925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1137FDCE7721ACD27634FF57 /* Pods-budget-master-9000-ios.release.xcconfig */;
+			baseConfigurationReference = 1480C6A83B20DE5609510851 /* Pods-cash-master-9000.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CAFRP4KNJ;
