@@ -33,6 +33,8 @@
 		2CEE07091F577EF200B6D8BA /* ExpenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE07081F577EF200B6D8BA /* ExpenseService.swift */; };
 		2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF4336A1F097A3B00ECEBC8 /* User.swift */; };
 		2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433721F098AF900ECEBC8 /* AppState.swift */; };
+		681A2B9A20CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */; };
+		681A2B9D20CF4641006EE991 /* ExpenseTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */; };
 		8DA948FD9A0CED8DCC7EC3C5 /* Pods_cash_master_9000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		2CEE07081F577EF200B6D8BA /* ExpenseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseService.swift; sourceTree = "<group>"; };
 		2CF4336A1F097A3B00ECEBC8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CF433721F098AF900ECEBC8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExpenseTypesTableViewController.swift; sourceTree = "<group>"; };
+		681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTypeTableViewCell.swift; sourceTree = "<group>"; };
 		7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +128,7 @@
 		2C645B8E1F0978990011E925 /* budget-master-9000-ios */ = {
 			isa = PBXGroup;
 			children = (
-				2CA430E21F5B175700307EF7 /* New Group */,
+				2CA430E21F5B175700307EF7 /* types */,
 				2C03ED421F11652400FBABD4 /* preferences */,
 				2CE865901F0AF21700DF8E64 /* expense */,
 				2C03ED411F11650700FBABD4 /* summary */,
@@ -142,12 +146,15 @@
 			path = "budget-master-9000-ios";
 			sourceTree = "<group>";
 		};
-		2CA430E21F5B175700307EF7 /* New Group */ = {
+		2CA430E21F5B175700307EF7 /* types */ = {
 			isa = PBXGroup;
 			children = (
+				681A2B9B20CF4626006EE991 /* cells */,
+				2C7F9C631F5E016B00C675A1 /* ExpenseTypeTheme.swift */,
 				2CA430E31F5B176500307EF7 /* ExpenseTypes.swift */,
+				681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */,
 			);
-			name = "New Group";
+			name = types;
 			sourceTree = "<group>";
 		};
 		2CADFAD31F0C106E009081B9 /* component */ = {
@@ -179,7 +186,6 @@
 				2C645B931F0978990011E925 /* Main.storyboard */,
 				2CADFACB1F0BFC2A009081B9 /* Colors.swift */,
 				2C50D4341F12970300761A10 /* BaseViewController.swift */,
-				2C7F9C631F5E016B00C675A1 /* ExpenseTypeTheme.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -190,6 +196,14 @@
 				2CF4336A1F097A3B00ECEBC8 /* User.swift */,
 			);
 			name = user;
+			sourceTree = "<group>";
+		};
+		681A2B9B20CF4626006EE991 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		7C4B7B9713891CDD3C665DEE /* Frameworks */ = {
@@ -350,7 +364,9 @@
 				2CB7F2411F0ADF5600C62B19 /* Expense.swift in Sources */,
 				2C645B901F0978990011E925 /* AppDelegate.swift in Sources */,
 				2C7F9C641F5E016B00C675A1 /* ExpenseTypeTheme.swift in Sources */,
+				681A2B9A20CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift in Sources */,
 				2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */,
+				681A2B9D20CF4641006EE991 /* ExpenseTypeTableViewCell.swift in Sources */,
 				2C50D43B1F130F1200761A10 /* CircleProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

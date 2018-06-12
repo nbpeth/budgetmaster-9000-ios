@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(types.count <= 0) {
             try! realm.write {
                 realm.add(ExpenseType(name: "Groceries", threshold: 0.0))
+                realm.add(ExpenseType(name: "Food and Beverage", threshold: 0.0))
+                realm.add(ExpenseType(name: "Medical", threshold: 0.0))
+                realm.add(ExpenseType(name: "Entertainment", threshold: 0.0))
+                realm.add(ExpenseType(name: "Miscellaneous", threshold: 0.0))
+                realm.add(ExpenseType(name: "Health and Fitness", threshold: 0.0))
+                realm.add(ExpenseType(name: "Household", threshold: 0.0))
+
             }
         }
         

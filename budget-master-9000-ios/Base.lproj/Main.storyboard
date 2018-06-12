@@ -107,6 +107,23 @@
             </objects>
             <point key="canvasLocation" x="-191.19999999999999" y="751.57421289355329"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="nny-BM-AVU">
+            <objects>
+                <navigationController id="j38-m8-rQc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R8R-9N-ZQw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TZR-N8-xl8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qWr-KX-dfi" kind="relationship" relationship="rootViewController" id="Ue3-7R-5lx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1e6-LB-c8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="752"/>
+        </scene>
         <!--More Features-->
         <scene sceneID="qPt-Hq-UI2">
             <objects>
@@ -158,6 +175,57 @@
                                             <segue destination="5Xa-N3-9an" kind="show" identifier="expenseDetailSegue" id="SWA-Uz-SVB"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="TcU-qh-m53" customClass="Mo">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TcU-qh-m53" id="8Vk-yC-VYB">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-cf-g0G">
+                                                    <rect key="frame" x="21" y="14.5" width="152.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.75705295139999995" blue="0.32378472219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nU6-cf-g0G" secondAttribute="bottom" constant="3.5" id="Rdn-BA-J3I"/>
+                                                <constraint firstItem="nU6-cf-g0G" firstAttribute="top" secondItem="8Vk-yC-VYB" secondAttribute="topMargin" constant="3" id="TvV-ZJ-URH"/>
+                                                <constraint firstItem="nU6-cf-g0G" firstAttribute="leading" secondItem="8Vk-yC-VYB" secondAttribute="leadingMargin" constant="5" id="tHA-gD-HpH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="GNC-Km-xxH" kind="show" id="95u-vc-VS3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="bTP-du-Edz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fd3-Qj-Fef" customClass="Mo">
+                                        <rect key="frame" x="0.0" y="179.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fd3-Qj-Fef" id="qZB-Zq-jye">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit a Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAr-hR-WTp">
+                                                    <rect key="frame" x="21" y="14.5" width="126.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.75705295139999995" blue="0.32378472219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NAr-hR-WTp" firstAttribute="leading" secondItem="qZB-Zq-jye" secondAttribute="leadingMargin" constant="5" id="gqb-oE-S6b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NAr-hR-WTp" secondAttribute="bottom" constant="3.5" id="hE8-8p-6nD"/>
+                                                <constraint firstItem="NAr-hR-WTp" firstAttribute="top" secondItem="qZB-Zq-jye" secondAttribute="topMargin" constant="3" id="oit-zS-ffZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -167,13 +235,55 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="more" id="X8f-fJ-W1b"/>
+                    <navigationItem key="navigationItem" id="ViZ-sI-tas"/>
                     <connections>
                         <outlet property="spendingThresholdLabel" destination="Yj9-c4-rJB" id="7wP-JV-ssN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmz-VP-UdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="1003"/>
+            <point key="canvasLocation" x="473" y="1547"/>
+        </scene>
+        <!--Expense Categories-->
+        <scene sceneID="5B1-cE-YrG">
+            <objects>
+                <tableViewController restorationIdentifier="ManageExpenseTypesTableViewController" storyboardIdentifier="ManageExpenseTypesTableViewController" title="Expense Categories" id="GNC-Km-xxH" customClass="ManageExpenseTypesTableViewController" customModule="cash_master_9000" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wM-hs-zaA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ExpenseTypeCell" editingAccessoryType="detailDisclosureButton" id="Hl5-Nh-3nI" customClass="ExpenseTypeTableViewCell" customModule="cash_master_9000" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hl5-Nh-3nI" id="pfA-C7-dDu">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Type Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjp-EW-OGH">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.17893301902859662" green="0.77365561548223349" blue="0.25571968926428018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="highlightedColor" red="0.059458926114373457" green="0.24877062182741116" blue="0.085327376002529973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Zjp-EW-OGH" id="r8L-2v-aFa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GNC-Km-xxH" id="TdO-L6-dZR"/>
+                            <outlet property="delegate" destination="GNC-Km-xxH" id="xbq-f3-zsy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wW-04-a8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="1111"/>
         </scene>
         <!--Spending Threshold-->
         <scene sceneID="Syw-NK-Gm5">
@@ -188,7 +298,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Set your Spending Threshold here. It is used to keep track of how much spendable cash you have left for the week." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-5t-vIN">
-                                <rect key="frame" x="0.0" y="70" width="375" height="153"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="153"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153" id="vfp-Qb-OyC"/>
                                 </constraints>
@@ -197,13 +307,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-Fv-fFY">
-                                <rect key="frame" x="104" y="231" width="167" height="30"/>
+                                <rect key="frame" x="104" y="275" width="167" height="30"/>
                                 <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="FpU-Mf-CZw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Cancel" id="4Rx-bK-WdU">
                                         <color key="tintColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -241,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7N-5D-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="1003"/>
+            <point key="canvasLocation" x="1182" y="1909"/>
         </scene>
         <!--Expenses-->
         <scene sceneID="eu9-Wc-BvU">
@@ -760,7 +870,7 @@
                         <segue destination="j9z-pD-odk" kind="relationship" relationship="viewControllers" id="Xse-Zr-uTp"/>
                         <segue destination="Zec-eD-I4E" kind="relationship" relationship="viewControllers" id="FZr-3j-Eua"/>
                         <segue destination="N0G-qR-4bj" kind="relationship" relationship="viewControllers" id="jFL-yN-l5y"/>
-                        <segue destination="qWr-KX-dfi" kind="relationship" relationship="viewControllers" id="pWT-8X-rst"/>
+                        <segue destination="j38-m8-rQc" kind="relationship" relationship="viewControllers" id="f1n-lQ-A5E"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssw-oj-vs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
