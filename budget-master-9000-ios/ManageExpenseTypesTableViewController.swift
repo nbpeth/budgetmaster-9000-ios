@@ -6,10 +6,21 @@ class ManageExpenseTypesTableViewController: UITableViewController {
     var expenseTypes: [ExpenseType] = [ExpenseType]()
     var expenseTypeService = ExpenseTypeService()
     
+    @IBAction func addExpenseTypeButtonWasPressed(_ sender: Any) {
+        expenseTypeService.createExpenseType(name: "New Category")
+        loadExpenseTypes()
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = Colors.background
-        expenseTypes = expenseTypeService.getAllTypes() ?? [ExpenseType]()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadExpenseTypes()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,7 +40,24 @@ class ManageExpenseTypesTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+       return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete){
+            let expenseType = expenseTypes[indexPath.row]
+            expenseTypeService.deleteExpenseType(expenseType: expenseType)
+            loadExpenseTypes()
+            self.tableView.reloadData()
+        }
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    fileprivate func loadExpenseTypes(){
+        expenseTypes = expenseTypeService.getAllTypes() ?? [ExpenseType]()
+
     }
 }

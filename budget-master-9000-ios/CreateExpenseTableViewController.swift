@@ -22,19 +22,11 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     var expenseTypeService: ExpenseTypeService?
     var expenseTypes: [ExpenseType] = [ExpenseType]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.expenseTypePicker.dataSource = self
-        self.expenseTypePicker.delegate = self
-        self.locationTextField.delegate = self
-        self.costTextField.delegate = self
+    //not reloading picker
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         expenseService = ExpenseService(delegate: self)
         expenseTypeService = ExpenseTypeService()
-        
-        self.view.backgroundColor = Colors.background
-
-        setExpenseDateLabel()
-        
         //extract
         guard let types = expenseTypeService?.getAllTypes()  else {
             expenseTypes = [ExpenseType]()
@@ -42,8 +34,22 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         }
         expenseTypes = types
         self.selectedExpenseType = expenseTypes[0]
-        
         expenseTypeDetailLabel.text = expenseTypes[0].name ?? ""
+        self.tableView.reloadData()
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.expenseTypePicker.dataSource = self
+        self.expenseTypePicker.delegate = self
+        self.locationTextField.delegate = self
+        self.costTextField.delegate = self
+        
+        self.view.backgroundColor = Colors.background
+
+        setExpenseDateLabel()
+        
         expenseDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     

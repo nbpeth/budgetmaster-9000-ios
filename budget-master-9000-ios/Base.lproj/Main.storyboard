@@ -280,6 +280,13 @@
                             <outlet property="delegate" destination="GNC-Km-xxH" id="xbq-f3-zsy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Expense Categoties" id="TDN-qD-khl">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="mCg-mh-zPE">
+                            <connections>
+                                <action selector="addExpenseTypeButtonWasPressed:" destination="GNC-Km-xxH" id="mHd-SK-uxZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wW-04-a8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
