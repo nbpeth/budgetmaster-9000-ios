@@ -31,7 +31,7 @@ class ExpenseTypeTheme {
             self.color = UIColor.purple.withAlphaComponent(opacity)
             self.image = UIImage(named: "ic_music_note_white")
             return self
-        case "Household Supplies":
+        case "Household":
             self.color = UIColor.yellow.withAlphaComponent(opacity)
             self.image = UIImage(named: "ic_build_white")
             return self

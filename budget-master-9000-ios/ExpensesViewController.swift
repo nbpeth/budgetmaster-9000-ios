@@ -98,7 +98,8 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
             date = Utils.formatDate(expenseDate)
         }
         
-        let theme = ExpenseTypeTheme().themeFor(type:expenseType?.name ?? "", with: 0.8)
+        let theme = ExpenseTypeTheme().themeFor(type: expenseType?.name ?? "Miscellaneous", with: 0.8)
+        
         cell.locationLabel.text = expense.location
         cell.expenseDateLabel.text = date
         cell.costLabel.text = "$\(cost)"
