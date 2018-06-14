@@ -17,7 +17,6 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         self.expenseService = ExpenseService(delegate: self)
         
         configureRefreshControl()
-        
     }
     
     func loadExpenses() {
@@ -68,7 +67,6 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return expenses.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? ExpenseTableViewCell

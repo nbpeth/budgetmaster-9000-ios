@@ -248,13 +248,44 @@
         <scene sceneID="5B1-cE-YrG">
             <objects>
                 <tableViewController restorationIdentifier="ManageExpenseTypesTableViewController" storyboardIdentifier="ManageExpenseTypesTableViewController" title="Expense Categories" id="GNC-Km-xxH" customClass="ManageExpenseTypesTableViewController" customModule="cash_master_9000" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wM-hs-zaA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wM-hs-zaA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mMP-fh-0Xb">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KM8-ok-euO">
+                                    <rect key="frame" x="8" y="44" width="359" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-AX-zFf">
+                                    <rect key="frame" x="170" y="81" width="34" height="30"/>
+                                    <state key="normal" title="Save"/>
+                                    <connections>
+                                        <action selector="saveNewTypeButtonWasPressed:" destination="GNC-Km-xxH" eventType="touchUpInside" id="Pla-XU-be0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" header="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="EGj-AX-zFf" firstAttribute="top" secondItem="KM8-ok-euO" secondAttribute="bottom" constant="7" id="3Ed-IE-5B2"/>
+                                <constraint firstItem="KM8-ok-euO" firstAttribute="leading" secondItem="mMP-fh-0Xb" secondAttribute="leading" constant="8" id="CaZ-eP-2nJ"/>
+                                <constraint firstAttribute="trailing" secondItem="KM8-ok-euO" secondAttribute="trailing" constant="8" id="XbQ-ao-sGZ"/>
+                                <constraint firstItem="KM8-ok-euO" firstAttribute="top" secondItem="mMP-fh-0Xb" secondAttribute="top" constant="44" id="w0d-Rz-4K9"/>
+                                <constraint firstItem="EGj-AX-zFf" firstAttribute="centerX" secondItem="mMP-fh-0Xb" secondAttribute="centerX" id="wLB-qs-9hs"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ExpenseTypeCell" editingAccessoryType="detailDisclosureButton" id="Hl5-Nh-3nI" customClass="ExpenseTypeTableViewCell" customModule="cash_master_9000" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="147" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hl5-Nh-3nI" id="pfA-C7-dDu">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
@@ -287,10 +318,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="mCg-mh-zPE" id="xw4-Gm-iCp"/>
+                        <outlet property="addNewExpenseTypeView" destination="mMP-fh-0Xb" id="tLL-Iq-bJc"/>
+                        <outlet property="newCategoryNameField" destination="KM8-ok-euO" id="TwU-RB-Wm6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wW-04-a8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="1111"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="1110.4947526236883"/>
         </scene>
         <!--Spending Threshold-->
         <scene sceneID="Syw-NK-Gm5">

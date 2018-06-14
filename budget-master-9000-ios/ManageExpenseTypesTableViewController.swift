@@ -5,15 +5,24 @@ class ManageExpenseTypesTableViewController: UITableViewController {
     
     var expenseTypes: [ExpenseType] = [ExpenseType]()
     var expenseTypeService = ExpenseTypeService()
-    
+    @IBOutlet weak var addNewExpenseTypeView: UIView!
+    @IBOutlet weak var newCategoryNameField: UITextField!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+
     @IBAction func addExpenseTypeButtonWasPressed(_ sender: Any) {
-        expenseTypeService.createExpenseType(name: "New Category")
+        addButton.title = addNewExpenseTypeView.isHidden ? "Add" : "Close"
+        addNewExpenseTypeView.isHidden = addNewExpenseTypeView.isHidden ? false : true
+    }
+    
+    @IBAction func saveNewTypeButtonWasPressed(_ sender: Any) {
+        expenseTypeService.createExpenseType(name: newCategoryNameField.text ?? "New Category")
         loadExpenseTypes()
         self.tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNewExpenseTypeView.isHidden = true
         self.tableView.backgroundColor = Colors.background
 
     }
