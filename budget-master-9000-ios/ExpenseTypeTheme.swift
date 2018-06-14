@@ -45,7 +45,7 @@ class ExpenseTypeTheme {
             return self
         default:
             self.color = UIColor.gray.withAlphaComponent(opacity)
-            self.image = UIImage(named: "icon_restaurant_50")
+            self.image = UIImage(named: "ic_build_white")
             return self
         }
     }

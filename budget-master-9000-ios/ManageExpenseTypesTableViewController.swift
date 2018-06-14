@@ -5,24 +5,9 @@ class ManageExpenseTypesTableViewController: UITableViewController {
     
     var expenseTypes: [ExpenseType] = [ExpenseType]()
     var expenseTypeService = ExpenseTypeService()
-    @IBOutlet weak var addNewExpenseTypeView: UIView!
-    @IBOutlet weak var newCategoryNameField: UITextField!
-    @IBOutlet weak var addButton: UIBarButtonItem!
-
-    @IBAction func addExpenseTypeButtonWasPressed(_ sender: Any) {
-        addButton.title = addNewExpenseTypeView.isHidden ? "Add" : "Close"
-        addNewExpenseTypeView.isHidden = addNewExpenseTypeView.isHidden ? false : true
-    }
-    
-    @IBAction func saveNewTypeButtonWasPressed(_ sender: Any) {
-        expenseTypeService.createExpenseType(name: newCategoryNameField.text ?? "New Category")
-        loadExpenseTypes()
-        self.tableView.reloadData()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addNewExpenseTypeView.isHidden = true
         self.tableView.backgroundColor = Colors.background
 
     }
@@ -34,19 +19,18 @@ class ManageExpenseTypesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseTypeCell") as? ExpenseTypeTableViewCell else { return UITableViewCell() }
-        
+        let theme = ExpenseTypeTheme().themeFor(type: expenseTypes[indexPath.row].name ?? "", with: 0.8)
         cell.nameLabel.text = expenseTypes[indexPath.row].name ?? ""
-
+        cell.typeImage?.image = theme.image?.withRenderingMode(.alwaysTemplate)
+        cell.typeImage?.tintColor = theme.color
+        cell.typeImage?.contentMode = .scaleAspectFit
+        
         return cell
 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return expenseTypes.count
-    }
-    
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -65,7 +49,7 @@ class ManageExpenseTypesTableViewController: UITableViewController {
         return 1
     }
     
-    fileprivate func loadExpenseTypes(){
+    func loadExpenseTypes(){
         expenseTypes = expenseTypeService.getAllTypes() ?? [ExpenseType]()
 
     }

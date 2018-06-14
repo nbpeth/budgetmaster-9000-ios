@@ -36,6 +36,7 @@
 		2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF433721F098AF900ECEBC8 /* AppState.swift */; };
 		681A2B9A20CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */; };
 		681A2B9D20CF4641006EE991 /* ExpenseTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */; };
+		683F47E420D31C78000A3E39 /* ManageExpenseTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F47E320D31C78000A3E39 /* ManageExpenseTypesViewController.swift */; };
 		8DA948FD9A0CED8DCC7EC3C5 /* Pods_cash_master_9000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		2CF433721F098AF900ECEBC8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExpenseTypesTableViewController.swift; sourceTree = "<group>"; };
 		681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTypeTableViewCell.swift; sourceTree = "<group>"; };
+		683F47E320D31C78000A3E39 /* ManageExpenseTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExpenseTypesViewController.swift; sourceTree = "<group>"; };
 		7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				2CA430E31F5B176500307EF7 /* ExpenseTypes.swift */,
 				681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */,
 				05B4345420D04A5F0096D63F /* CreateNewExpenseTypeViewController.swift */,
+				683F47E320D31C78000A3E39 /* ManageExpenseTypesViewController.swift */,
 			);
 			name = types;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				2CA430E41F5B176500307EF7 /* ExpenseTypes.swift in Sources */,
 				2C50D4351F12970300761A10 /* BaseViewController.swift in Sources */,
 				2C50D4371F12A4F300761A10 /* TabCarController.swift in Sources */,
+				683F47E420D31C78000A3E39 /* ManageExpenseTypesViewController.swift in Sources */,
 				2CADFAD01F0C073F009081B9 /* CreateExpenseTableViewController.swift in Sources */,
 				2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */,
 				2C77D9C81F0D6EBD00CF4F1A /* SummaryViewController.swift in Sources */,
