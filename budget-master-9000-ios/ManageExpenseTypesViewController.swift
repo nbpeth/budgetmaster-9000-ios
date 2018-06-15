@@ -13,6 +13,7 @@ class ManageExpenseTypesViewController: UIViewController {
         let newCategoryName = text.isEmpty ? "New Category" : text
         expenseTypeTable.expenseTypeService.createExpenseType(name: newCategoryName)
         expenseTypeTable.loadExpenseTypes()
+        newTypeTextField.text = ""
         expenseTypeTable.tableView.reloadData()
     }
     

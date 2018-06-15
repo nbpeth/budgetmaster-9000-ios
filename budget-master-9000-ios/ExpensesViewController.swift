@@ -76,14 +76,14 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         return formatCell(cell, row: indexPath.row)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let destination = storyboard.instantiateViewController(withIdentifier: "ExpenseDetailViewController") as? ExpenseDetailViewController {
-            
-            destination.expense = expenses[indexPath.row]
-            self.navigationController?.pushViewController(destination, animated: true)
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let destination = storyboard.instantiateViewController(withIdentifier: "ExpenseDetailViewController") as? ExpenseDetailViewController {
+//            
+//            destination.expense = expenses[indexPath.row]
+//            self.navigationController?.pushViewController(destination, animated: true)
+//        }
+//    }
 
     fileprivate func formatCell(_ cell:ExpenseTableViewCell, row:Int) -> ExpenseTableViewCell{
         

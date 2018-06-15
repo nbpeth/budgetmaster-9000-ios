@@ -27,15 +27,14 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         super.viewWillAppear(animated)
         expenseService = ExpenseService(delegate: self)
         expenseTypeService = ExpenseTypeService()
-        //extract
-        guard let types = expenseTypeService?.getAllTypes()  else {
-            expenseTypes = [ExpenseType]()
-            return
-        }
+
+        guard let types = expenseTypeService?.getAllTypes()  else { return }
         expenseTypes = types
         self.selectedExpenseType = expenseTypes[0]
         expenseTypeDetailLabel.text = expenseTypes[0].name ?? ""
-        self.tableView.reloadData()
+        
+        expenseTypePicker.reloadAllComponents()
+//        self.tableView.reloadData()
 
     }
     
