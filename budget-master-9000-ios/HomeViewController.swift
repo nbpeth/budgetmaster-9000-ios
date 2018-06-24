@@ -10,14 +10,11 @@ class HomeViewController: BaseViewController {
     @IBOutlet var leftSwiper: UISwipeGestureRecognizer!
     @IBOutlet var rightSwiper: UISwipeGestureRecognizer!
     @IBOutlet weak var dateRangeLabel: UILabel!
-    
     var page: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         expenseService = ExpenseService(delegate: self)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +44,12 @@ class HomeViewController: BaseViewController {
     override func success(response: Week) {
         activityIndicator.stopAnimating()
         configureRemainingMoneyLabel(response)
-        
+        refreshAggregatesTable(response)
+    }
+    
+    func refreshAggregatesTable(_ week: Week){
+        guard let embeddedTable = self.childViewControllers[0] as? SummaryAggregatesTableViewController else { return }
+        embeddedTable.loadData(week: week)
     }
     
     fileprivate func pageForward(){
@@ -98,12 +100,10 @@ class HomeViewController: BaseViewController {
     fileprivate func loadProgressBar(sum:Double, threshold:Double){
         let spend = sum / threshold
         let value = spend >= 1 ? 100 : 100 - spend
-        circleProgressView.moveit(value: Float(value))
+        circleProgressView.moveit(Float(value))
     }
     
     fileprivate func spendingThreshold() -> Double {
         return Double(AppState.shared.user.spendingThreshold.value!)
     }
-
-
 }

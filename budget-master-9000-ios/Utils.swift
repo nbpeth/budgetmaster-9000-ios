@@ -8,7 +8,6 @@ class Utils {
         let dateString = formatter.string(from: date)
         
         return dateString
-        
     }
 }
 
@@ -25,7 +24,7 @@ class Week {
     
     func findStartDate(offset: Int, _ cal: Calendar) -> Date {
         var comps = cal.dateComponents([.weekOfYear, .yearForWeekOfYear], from: Date())
-        comps.weekday = 2
+        comps.weekday = 1
         guard let monday = cal.date(from: comps) else { return Date() }
         
         if(offset <= 0){
@@ -43,7 +42,7 @@ class Week {
         }
         
         var thisWeek = getThisWeek(cal: cal)
-        thisWeek.weekday = 1
+        thisWeek.weekday = 7
         
         let sunday = cal.date(from: thisWeek)
         let sundayEndOfDay = cal.date(bySettingHour: 23, minute: 59, second: 59, of: sunday!)!
@@ -59,7 +58,7 @@ class Week {
     
     fileprivate func getCalendar() -> Calendar {
         var cal = Calendar.current
-        cal.firstWeekday = 2
+        cal.firstWeekday = 1
         cal.timeZone = TimeZone(abbreviation: "GMT")!
         
         return cal

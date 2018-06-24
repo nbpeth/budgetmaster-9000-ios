@@ -17,9 +17,8 @@
 		2C645B951F0978990011E925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B931F0978990011E925 /* Main.storyboard */; };
 		2C645B971F0978990011E925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B961F0978990011E925 /* Assets.xcassets */; };
 		2C645B9A1F0978990011E925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C645B981F0978990011E925 /* LaunchScreen.storyboard */; };
-		2C77D9C81F0D6EBD00CF4F1A /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9C71F0D6EBD00CF4F1A /* SummaryViewController.swift */; };
 		2C77D9CA1F0D708500CF4F1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C77D9C91F0D708500CF4F1A /* GoogleService-Info.plist */; };
-		2C77D9CE1F0DB85400CF4F1A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */; };
+		2C77D9CE1F0DB85400CF4F1A /* AggregatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77D9CD1F0DB85400CF4F1A /* AggregatesTableViewCell.swift */; };
 		2C7F9C641F5E016B00C675A1 /* ExpenseTypeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F9C631F5E016B00C675A1 /* ExpenseTypeTheme.swift */; };
 		2CA2B4FE1F89920E003DAD87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2B4FD1F89920E003DAD87 /* Utils.swift */; };
 		2CA2B5001F899358003DAD87 /* ServiceDelegatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2B4FF1F899358003DAD87 /* ServiceDelegatable.swift */; };
@@ -37,6 +36,9 @@
 		681A2B9A20CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */; };
 		681A2B9D20CF4641006EE991 /* ExpenseTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */; };
 		683F47E420D31C78000A3E39 /* ManageExpenseTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F47E320D31C78000A3E39 /* ManageExpenseTypesViewController.swift */; };
+		6863698420D9CFE70056DCF1 /* WeekStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863698320D9CFE70056DCF1 /* WeekStart.swift */; };
+		6863698620D9D19C0056DCF1 /* StartDayOfTheWeekTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863698520D9D19C0056DCF1 /* StartDayOfTheWeekTableViewController.swift */; };
+		68929F7120D573B000E594D0 /* SummaryAggregatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68929F7020D573B000E594D0 /* SummaryAggregatesTableViewController.swift */; };
 		8DA948FD9A0CED8DCC7EC3C5 /* Pods_cash_master_9000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03540B88AEF135D71938516B /* Pods_cash_master_9000.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +59,8 @@
 		2C645B961F0978990011E925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C645B991F0978990011E925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C645B9B1F0978990011E925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C77D9C71F0D6EBD00CF4F1A /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		2C77D9C91F0D708500CF4F1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		2C77D9CD1F0DB85400CF4F1A /* AggregatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregatesTableViewCell.swift; sourceTree = "<group>"; };
 		2C7F9C631F5E016B00C675A1 /* ExpenseTypeTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTypeTheme.swift; sourceTree = "<group>"; };
 		2CA2B4FD1F89920E003DAD87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2CA2B4FF1F899358003DAD87 /* ServiceDelegatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegatable.swift; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		681A2B9920CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExpenseTypesTableViewController.swift; sourceTree = "<group>"; };
 		681A2B9C20CF4641006EE991 /* ExpenseTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTypeTableViewCell.swift; sourceTree = "<group>"; };
 		683F47E320D31C78000A3E39 /* ManageExpenseTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExpenseTypesViewController.swift; sourceTree = "<group>"; };
+		6863698320D9CFE70056DCF1 /* WeekStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStart.swift; sourceTree = "<group>"; };
+		6863698520D9D19C0056DCF1 /* StartDayOfTheWeekTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDayOfTheWeekTableViewController.swift; sourceTree = "<group>"; };
+		68929F7020D573B000E594D0 /* SummaryAggregatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryAggregatesTableViewController.swift; sourceTree = "<group>"; };
 		7C605E117D7C03C5FAB65A19 /* Pods-budget-master-9000-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budget-master-9000-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budget-master-9000-ios/Pods-budget-master-9000-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +99,8 @@
 		2C03ED411F11650700FBABD4 /* summary */ = {
 			isa = PBXGroup;
 			children = (
-				2C77D9C71F0D6EBD00CF4F1A /* SummaryViewController.swift */,
-				2C77D9CD1F0DB85400CF4F1A /* StatsTableViewCell.swift */,
+				2C77D9CD1F0DB85400CF4F1A /* AggregatesTableViewCell.swift */,
+				68929F7020D573B000E594D0 /* SummaryAggregatesTableViewController.swift */,
 			);
 			name = summary;
 			sourceTree = "<group>";
@@ -106,6 +110,8 @@
 			children = (
 				2C03ED3F1F11608400FBABD4 /* MoreTableViewController.swift */,
 				2C03ED431F1190E400FBABD4 /* EditSpendingThresholdViewController.swift */,
+				6863698320D9CFE70056DCF1 /* WeekStart.swift */,
+				6863698520D9D19C0056DCF1 /* StartDayOfTheWeekTableViewController.swift */,
 			);
 			name = preferences;
 			sourceTree = "<group>";
@@ -352,7 +358,8 @@
 			files = (
 				2CC000711F5C75650042E3E0 /* ExpenseDetailViewController.swift in Sources */,
 				2CEE07091F577EF200B6D8BA /* ExpenseService.swift in Sources */,
-				2C77D9CE1F0DB85400CF4F1A /* StatsTableViewCell.swift in Sources */,
+				2C77D9CE1F0DB85400CF4F1A /* AggregatesTableViewCell.swift in Sources */,
+				68929F7120D573B000E594D0 /* SummaryAggregatesTableViewController.swift in Sources */,
 				2C03ED401F11608400FBABD4 /* MoreTableViewController.swift in Sources */,
 				2CADFACC1F0BFC2A009081B9 /* Colors.swift in Sources */,
 				2CD77F7A1F099E3000342FA9 /* ExpensesViewController.swift in Sources */,
@@ -363,7 +370,6 @@
 				683F47E420D31C78000A3E39 /* ManageExpenseTypesViewController.swift in Sources */,
 				2CADFAD01F0C073F009081B9 /* CreateExpenseTableViewController.swift in Sources */,
 				2CF433731F098AF900ECEBC8 /* AppState.swift in Sources */,
-				2C77D9C81F0D6EBD00CF4F1A /* SummaryViewController.swift in Sources */,
 				2CE865921F0AF24500DF8E64 /* ExpenseTableViewCell.swift in Sources */,
 				2CF4336B1F097A3B00ECEBC8 /* User.swift in Sources */,
 				2CA2B4FE1F89920E003DAD87 /* Utils.swift in Sources */,
@@ -372,6 +378,8 @@
 				2C645B901F0978990011E925 /* AppDelegate.swift in Sources */,
 				2C7F9C641F5E016B00C675A1 /* ExpenseTypeTheme.swift in Sources */,
 				681A2B9A20CF45BC006EE991 /* ManageExpenseTypesTableViewController.swift in Sources */,
+				6863698620D9D19C0056DCF1 /* StartDayOfTheWeekTableViewController.swift in Sources */,
+				6863698420D9CFE70056DCF1 /* WeekStart.swift in Sources */,
 				05B4345520D04A5F0096D63F /* CreateNewExpenseTypeViewController.swift in Sources */,
 				2CD77F7C1F099EB100342FA9 /* HomeViewController.swift in Sources */,
 				681A2B9D20CF4641006EE991 /* ExpenseTypeTableViewCell.swift in Sources */,

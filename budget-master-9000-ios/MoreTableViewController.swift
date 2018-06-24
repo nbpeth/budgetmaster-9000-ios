@@ -1,7 +1,7 @@
 import UIKit
 
 class MoreTableViewController: BaseTableViewController {
-    
+    @IBOutlet weak var startOftheWeekLabel: UILabel!
     @IBOutlet weak var spendingThresholdLabel: UILabel!
     
     override func viewDidLoad() {
@@ -13,6 +13,7 @@ class MoreTableViewController: BaseTableViewController {
         super.viewWillAppear(animated)
         let user = AppState.shared.user
         spendingThresholdLabel.text = "$\(String(describing: user.spendingThreshold.value ?? 0))"
-        
+        let startOfTheWeek = WeekStart.getWeekStart().getNameOfDay()
+        startOftheWeekLabel.text = "\(startOfTheWeek)"
     }
 }

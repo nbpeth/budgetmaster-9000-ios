@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         
         let types = realm.objects(ExpenseType.self)
-        if(types.count <= 0) {
+        if(types.count <= 0) { //oh wait, this is going to readd them every time if someone deletes theirs.. also why would they
             try! realm.write {
                 realm.add(ExpenseType(name: "Groceries", threshold: 0.0))
                 realm.add(ExpenseType(name: "Food and Beverage", threshold: 0.0))
@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 realm.add(ExpenseType(name: "Miscellaneous", threshold: 0.0))
                 realm.add(ExpenseType(name: "Health and Fitness", threshold: 0.0))
                 realm.add(ExpenseType(name: "Household", threshold: 0.0))
-
+                
+//                realm.add(WeekStart(1))
             }
         }
         

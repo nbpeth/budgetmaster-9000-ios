@@ -3,7 +3,8 @@ import UIKit
 @IBDesignable
 class CircleProgressView: UIView {
     var value:Float?
-    @IBInspectable var lineWidth:CGFloat?
+    var lineWidth:CGFloat?
+    var inTheRed: Bool = false
     @IBInspectable var baseColor:UIColor?
     @IBInspectable var progressColor:UIColor?
     
@@ -19,13 +20,16 @@ class CircleProgressView: UIView {
         
         progressCirclePath.lineWidth = CGFloat(20)
         
-        progressColor?.set()
+//        progressColor?.set()
+        progressColor = self.value ?? Float(0) >= Float(100) ? UIColor.red : UIColor.green
+        progressColor?.setStroke()
         progressCirclePath.stroke()
         
     }
     
-    func moveit(value:Float){
+    func moveit(_ value:Float){
         self.value = value
+//        self.inTheRed = inTheRed
         setNeedsDisplay()
     }
     

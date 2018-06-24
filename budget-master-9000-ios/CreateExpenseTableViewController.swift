@@ -22,7 +22,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     var expenseTypeService: ExpenseTypeService?
     var expenseTypes: [ExpenseType] = [ExpenseType]()
     
-    //not reloading picker
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         expenseService = ExpenseService(delegate: self)
@@ -34,7 +33,6 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
         expenseTypeDetailLabel.text = expenseTypes[0].name ?? ""
         
         expenseTypePicker.reloadAllComponents()
-//        self.tableView.reloadData()
 
     }
     
