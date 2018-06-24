@@ -11,7 +11,7 @@ class ExpenseTypeTheme {
             self.color = UIColor.red.withAlphaComponent(opacity)
             self.image = UIImage(named: "ic_shopping_cart_white")
             return self
-        case "Restaurant":
+        case "Food and Beverage":
             self.color = UIColor.green.withAlphaComponent(opacity)
             self.image = UIImage(named: "ic_cake_white")
             return self

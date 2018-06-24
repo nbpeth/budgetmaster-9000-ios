@@ -34,7 +34,7 @@ class ManageExpenseTypesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-       return true
+       return !ExpenseType.defaultTypeNames.contains(expenseTypes[indexPath.row].name ?? "")
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -2,6 +2,14 @@
 import Foundation
 import RealmSwift
 
+extension ExpenseType {
+    static var defaultTypeNames: [String] {
+        get {
+            return ["Groceries","Food and Beverage","Miscellaneous","Entertainment","Health and Fitness","Household","Travel","Medical","Clothing"]
+        }
+    }
+}
+
 class ExpenseType: Object {
     dynamic var name:String?
     var threshold = RealmOptional<Double>()
