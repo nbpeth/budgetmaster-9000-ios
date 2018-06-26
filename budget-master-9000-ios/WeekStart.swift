@@ -33,8 +33,6 @@ extension WeekStart {
 
 extension Int {
     func getNameOfDay() -> String {
-        print("!!!")
-        print(self)
         return [1:"Sunday",2:"Monday",3:"Tuesday",4:"Wednesday",5:"Thursday",6:"Friday",7:"Saturday"][self] ?? ""
         
     }

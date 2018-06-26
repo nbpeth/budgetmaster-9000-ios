@@ -19,6 +19,7 @@ class ManageExpenseTypesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Colors.background
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

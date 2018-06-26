@@ -17,14 +17,16 @@ class Week {
     var expenses = [Expense]()
     
     init(offset: Int){
-        let calendar = getCalendar()
+        let startOfWeek = WeekStart.getWeekStart()
+        let calendar = getCalendar(startOfWeek: startOfWeek)
         startDate = findStartDate(offset: offset, calendar)
         endDate = findEndDate(offset: offset, calendar)
     }
     
     func findStartDate(offset: Int, _ cal: Calendar) -> Date {
         var comps = cal.dateComponents([.weekOfYear, .yearForWeekOfYear], from: Date())
-        comps.weekday = 1
+        comps.weekday = WeekStart.getWeekStart()
+        
         guard let monday = cal.date(from: comps) else { return Date() }
         
         if(offset <= 0){
@@ -40,9 +42,9 @@ class Week {
         if offset == 0 {
             return Date()
         }
-        
+        let startOfWeek = WeekStart.getWeekStart()
         var thisWeek = getThisWeek(cal: cal)
-        thisWeek.weekday = 7
+        thisWeek.weekday = startOfWeek == 1 ? 7 : startOfWeek - 1
         
         let sunday = cal.date(from: thisWeek)
         let sundayEndOfDay = cal.date(bySettingHour: 23, minute: 59, second: 59, of: sunday!)!
@@ -56,9 +58,9 @@ class Week {
         return cal.dateComponents([.month, .year, .weekOfMonth, .weekOfYear], from: Date())
     }
     
-    fileprivate func getCalendar() -> Calendar {
+    fileprivate func getCalendar(startOfWeek: Int) -> Calendar {
         var cal = Calendar.current
-        cal.firstWeekday = 1
+        cal.firstWeekday = startOfWeek
         cal.timeZone = TimeZone(abbreviation: "GMT")!
         
         return cal

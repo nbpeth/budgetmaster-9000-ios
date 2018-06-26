@@ -11,19 +11,8 @@ class SummaryAggregatesTableViewController: UITableViewController {
     
     func loadData(week: Week?){
         self.aggs = [(key: String, value: Double)]()
-        calculateAggregates(week)
+        self.aggs = ExpenseService.calculateAggregates(week)
         self.tableView.reloadData()
-    }
-    
-    func calculateAggregates(_ week: Week?){
-        guard let expenses = week?.expenses else { return }
-        
-        aggs = expenses.reduce(into: [String:Double]()) { (res: inout [String:Double], next: Expense) in
-            let cost = next.cost.value ?? 0
-            let name = next.expenseType?.name ?? ""
-            let currentValue = res[name] ?? 0
-            res[name] = currentValue + cost
-        }.sorted { $0.value > $1.value }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

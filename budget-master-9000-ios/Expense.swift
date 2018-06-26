@@ -41,7 +41,7 @@ class Expense: Object {
 
     static func loadExpenses() -> [Expense]? {
         let realm = try! Realm()
-        let expenses:[Expense] = realm.objects(Expense.self).map{$0}
+        let expenses:[Expense] = realm.objects(Expense.self).sorted{$0.0.expenseDate! > $0.1.expenseDate!}.map{$0}
         
         return expenses
     }
