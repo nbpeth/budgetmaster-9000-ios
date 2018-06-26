@@ -1,0 +1,6 @@
+framework module Pods_cash_master_9000 {
+  umbrella header "Pods-cash-master-9000-umbrella.h"
+
+  export *
+  module * { export * }
+}
