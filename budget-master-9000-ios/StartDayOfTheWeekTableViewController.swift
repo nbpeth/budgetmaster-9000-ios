@@ -17,13 +17,16 @@ class StartDayOfTheWeekTableViewController: UITableViewController {
         self.tableView.backgroundColor = Colors.background
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let currentDay = WeekStart.getWeekStart() + 1
-//        if(indexPath.row == currentDay) {
-//            highlightCell(row: currentDay)
-//        }
-//        return tableView.cellForRow(at: indexPath) ?? UITableViewCell()
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   
+        let currentDay = WeekStart.getWeekStart() - 1
+        
+        if(indexPath.row == currentDay) {
+            highlightCell(row: currentDay)
+        }
+        
+        return super.tableView(tableView, cellForRowAt: indexPath)
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         WeekStart.setWeekStart(day: indexPath.row + 1)
