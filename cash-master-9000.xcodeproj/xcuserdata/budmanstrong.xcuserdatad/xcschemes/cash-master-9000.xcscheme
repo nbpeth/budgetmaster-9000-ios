@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C645B8B1F0978990011E925"
-               BuildableName = "cash-master-9000.app"
+               BuildableName = "Cash Master 9k.app"
                BlueprintName = "cash-master-9000"
                ReferencedContainer = "container:cash-master-9000.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C645B8B1F0978990011E925"
-            BuildableName = "cash-master-9000.app"
+            BuildableName = "Cash Master 9k.app"
             BlueprintName = "cash-master-9000"
             ReferencedContainer = "container:cash-master-9000.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C645B8B1F0978990011E925"
-            BuildableName = "cash-master-9000.app"
+            BuildableName = "Cash Master 9k.app"
             BlueprintName = "cash-master-9000"
             ReferencedContainer = "container:cash-master-9000.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C645B8B1F0978990011E925"
-            BuildableName = "cash-master-9000.app"
+            BuildableName = "Cash Master 9k.app"
             BlueprintName = "cash-master-9000"
             ReferencedContainer = "container:cash-master-9000.xcodeproj">
          </BuildableReference>
