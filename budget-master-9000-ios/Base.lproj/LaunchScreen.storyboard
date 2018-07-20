@@ -30,11 +30,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4e-rP-C9L">
                                 <rect key="frame" x="145.5" y="353.5" width="84.5" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
-                                <color key="textColor" red="1" green="0.21482703959999999" blue="0.24094367820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-256" translatesAutoresizingMaskIntoConstraints="NO" id="K8C-f5-QtQ">
+                                <rect key="frame" x="59" y="28" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7K8-As-ear" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OSK-Y1-yM3"/>
                             <constraint firstItem="V4e-rP-C9L" firstAttribute="top" secondItem="7K8-As-ear" secondAttribute="bottom" constant="1" id="eqa-yw-ryb"/>
@@ -45,7 +49,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-256" width="256" height="256"/>
+    </resources>
 </document>
