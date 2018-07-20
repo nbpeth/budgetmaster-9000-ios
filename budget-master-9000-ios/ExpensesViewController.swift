@@ -91,7 +91,7 @@ class ExpensesViewController: BaseViewController, UITableViewDelegate, UITableVi
         
         cell.locationLabel.text = expense.location
         cell.expenseDateLabel.text = date
-        cell.costLabel.text = "$\(cost)"
+        cell.costLabel.text = "\(String(format: "$%.02f", locale: Locale.current, arguments: [cost]))"
         cell.expenseColorView.backgroundColor = theme.color
         cell.imageView?.image = theme.image!.withRenderingMode(.alwaysTemplate)
         cell.imageView?.tintColor = theme.color

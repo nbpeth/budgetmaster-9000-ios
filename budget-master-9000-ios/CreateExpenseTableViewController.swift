@@ -81,6 +81,9 @@ class CreateExpenseTableViewController: BaseTableViewController, UIPickerViewDel
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        [descriptionTextField, costTextField, locationTextField].forEach {
+            $0?.resignFirstResponder()
+        }
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {

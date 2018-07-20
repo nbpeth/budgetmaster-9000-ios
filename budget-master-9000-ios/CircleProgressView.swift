@@ -20,8 +20,7 @@ class CircleProgressView: UIView {
         
         progressCirclePath.lineWidth = CGFloat(20)
         
-//        progressColor?.set()
-        progressColor = self.value ?? Float(0) >= Float(100) ? UIColor.red : UIColor.green
+        progressColor = self.value ?? Float(0) >= Float(100) ? UIColor.red : UIColor.black
         progressColor?.setStroke()
         progressCirclePath.stroke()
         
@@ -29,7 +28,6 @@ class CircleProgressView: UIView {
     
     func moveit(_ value:Float){
         self.value = value
-//        self.inTheRed = inTheRed
         setNeedsDisplay()
     }
     

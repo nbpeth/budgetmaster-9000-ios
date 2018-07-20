@@ -99,8 +99,14 @@ class HomeViewController: BaseViewController {
     
     fileprivate func loadProgressBar(sum:Double, threshold:Double){
         let spend = sum / threshold
-        let value = spend >= 1 ? 100 : 100 - spend
+        var value = 0.0
+        
+        if(spend > 0) {
+            value = spend >= 1 ? 100 : 100 - spend
+        }
+        
         circleProgressView.moveit(Float(value))
+        
     }
     
     fileprivate func spendingThreshold() -> Double {
